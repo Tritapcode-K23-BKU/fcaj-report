@@ -1,4 +1,4 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+baseURL = "https://Tritapcode-K23-BKU.github.io/fcaj-report/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
@@ -26,7 +26,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Internship Report"
 weight = 1
 languageName = "English"
-
+ba
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-aws'></i> AWS Study Group - Blog"
 identifier = "AWS Study Group"
