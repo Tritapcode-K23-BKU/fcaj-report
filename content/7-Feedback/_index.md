@@ -6,82 +6,91 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-#### What I valued most about the programme
+#### 1. Impressions of the programme
 
-**Working on a real AWS account.** This was the biggest difference from
-classroom learning. When resources cost real money, you are forced to think
-before creating them and to remember to clean up afterwards. That habit does not
-form from paper exercises or simulated environments.
+**Working on a real AWS account** was the biggest difference from classroom
+learning. When resources cost real money, you are forced to think before creating
+them and to remember to clean up afterwards. That habit does not form from
+exercises in a simulated environment.
 
-**The self-study format.** At first I struggled because nobody walked me through
-each step. After a few weeks I realised this is how real work operates: nobody
-hands you step-by-step instructions, only documentation and a problem to solve.
-Reading primary documentation and diagnosing failures myself are the skills I
-will keep longest.
+**The self-study format** felt difficult at first because nobody walked me
+through each step. After a few weeks I realised this is how real work operates:
+nobody hands you step-by-step instructions, only documentation and a problem to
+solve. Reading primary documentation and diagnosing failures myself are the
+skills I will keep longest.
 
-**The requirement to write the workshop as a lab.** I initially saw this as
+**The requirement to write the workshop as a lab** initially seemed like
 paperwork. Writing it changed my mind: to guide someone else through the same
 build, you have to genuinely understand every step rather than gloss over it.
-Several things I thought I understood turned out to be gaps once I tried to
-write them down.
+Several things I thought I understood turned out to be gaps. This proved a far
+more effective knowledge check than self-assessment.
 
-#### Difficulties I faced
+#### 2. Satisfaction level
 
-**Feeling overwhelmed at the start.** AWS has too many services, and before you
-know what your problem needs, it is hard to know what to learn first. I spent
-roughly the first two weeks reading without direction. Only after settling on a
-project did my learning become focused.
+**Overall: 9/10 — Very satisfied.**
 
-**Cost anxiety.** I felt tense every time I created a new resource, worried I
-would forget to delete it and receive a bill. Learning to set budget alerts made
-me far more comfortable experimenting.
+| Aspect | Level | Reason |
+|---|---|---|
+| Course content | Very satisfied | Grounded in practice, with labs on a real account |
+| Mentor support | Satisfied | Timely help without doing the work for you |
+| Community | Very satisfied | The AWS Study Group is active and responsive |
+| Programme organisation | Satisfied | Clear about rules and deadlines |
+| Hands-on opportunity | Very satisfied | A real project to deploy rather than exercises |
 
-**Coordination proved harder than the technical work.** Stitching together
-components written by five different people took far longer than I expected.
+What I valued most is that the programme does not spoon-feed. It sets a problem
+and lets you solve it. That is harder, but it sticks.
 
-#### Suggestions for the programme
+#### 3. Areas for improvement
 
 I offer these constructively, based on the experience of a complete beginner.
 
-**Hold a cost-management session at the very beginning.** Several people in my
-team did not know that some services bill by existence rather than by usage. An
-early briefing on AWS Budgets and a list of services that accrue cost quietly
-would make people more confident about experimenting.
+**Hold a cost-management session at the very start.** Several people in my team
+did not know that some services bill by existence rather than by usage, for
+example a Personalize campaign. An early briefing on AWS Budgets and a list of
+services that accrue cost quietly would make people more confident about
+experimenting rather than hesitant.
 
-**Provide sample project ideas graded by difficulty.** When choosing a topic, my
-team was unsure what scope was realistic in the time available. A reference list
-with rough effort estimates would stop teams from over-scoping and running out
-of time.
+**Provide sample project ideas graded by difficulty.** When choosing a topic my
+team was unsure what scope was realistic in the time available. We initially
+planned something far larger and had to cut it back. A reference list with rough
+effort estimates would stop teams from over-scoping.
 
 **Publish a pre-submission checklist.** For example, the minimum number of
-services a workshop must use and which sections are required. I had to read the
-rules page several times to catch everything, and nearly missed the monitoring
-section.
+services a workshop must use, which sections are required, and the submission
+format. I had to read the rules page several times to catch everything and nearly
+missed the monitoring and alerting section.
 
-#### Advice for future participants
+**Offer a short Hugo primer for people who have never used it.** Building the
+report website consumed a significant amount of my time on technical setup, time
+that would have been better spent on content.
 
-**Pick a project you can finish rather than one that looks impressive.** A small
-system where you understand every part beats a sprawling one where you cannot
-explain any of it.
+#### 4. Would I recommend the programme to friends
 
-**Do not just follow tutorials.** Following along makes things run, but leaves
-you stuck the moment something breaks. At each step, ask what it is for and what
-would happen without it.
+**Yes, and I already have.**
 
-**Agree on data formats with your team on day one.** This was my team's most
-expensive lesson. Agreeing before writing code costs almost nothing; fixing it
-after both sides have finished costs a great deal.
+Three reasons I would encourage friends to join:
 
-**Set a budget alert before creating your first resource.** Five minutes of
-configuration buys peace of mind for the whole term.
+**First, hands-on work on real infrastructure.** Most cloud courses stop at
+videos and simulated exercises. Here you create resources yourself, pay for your
+own mistakes and clean up after yourself. That experience cannot be substituted.
 
-**Write down every error and its fix as it happens.** You will need exactly
-those details when writing your report, by which point you will have forgotten
-them.
+**Second, you learn how to work rather than just what to know.** Knowledge about
+AWS services is available in documentation. But the habit of reading primary
+sources, diagnosing faults layer by layer, weighing trade-offs before deciding,
+and staying conscious of cost only forms through real exposure.
+
+**Third, you finish with something concrete to discuss in interviews.** After the
+programme I have a live system, a source repository and technical documentation
+explaining every decision. That is far more substantial than a certification line
+on a CV.
+
+I would give friends one caveat: the programme suits people ready to study
+independently. If you are used to step-by-step guidance, the first week will be a
+struggle.
 
 #### Acknowledgements
 
 I would like to thank the mentors and the AWS Study Group community for their
 support throughout the internship, and my teammates for pulling the project
-together under time pressure. This internship showed me the gap between knowing
-a technology and being able to use it, and that is what I valued most.
+together under time pressure. This internship showed me the gap between knowing a
+technology and being able to use it, and that is what I valued most.

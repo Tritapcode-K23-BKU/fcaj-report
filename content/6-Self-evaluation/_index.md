@@ -1,106 +1,113 @@
 ---
-title: "Self-Assessment"
+title: "Self-evaluation"
 date: 2026-07-29
 weight: 6
 chapter: false
 pre: " <b> 6. </b> "
 ---
 
-#### Overview
+#### Self-evaluation summary
 
-The internship at First Cloud AI Journey was my first time working with real
-cloud infrastructure, where every mistake has real consequences. I have written
-this self-assessment honestly, covering both what went well and what did not.
+| Criterion | Level | Comment |
+|---|---|---|
+| Knowledge | Good | Solid on serverless, weaker on networking and containers |
+| Learning ability | Strong | Reads primary documentation rather than hunting for ready answers |
+| Initiative | Strong | Proposed the data improvement when the model underperformed |
+| Discipline | Good | Kept to schedule, though the first two weeks lacked direction |
+| Communication | Good | Able to explain infrastructure concepts to non-specialists |
+| Teamwork | Fair to good | Fell short on agreeing data conventions at the start |
+| Problem solving | Good | Clear improvement in diagnosing faults layer by layer |
+| Contribution to the project | Strong | Owned all infrastructure and architectural decisions |
 
-#### Technical knowledge
+#### Detailed comments
 
-Before the internship, my understanding of cloud computing stopped at the
-conceptual level: I knew the cloud meant renting someone else's servers and I
-recognised a few service names, but I had never built a complete system.
+**Knowledge — Good**
 
-By the end, I had deployed a live system on the Internet built from seven
-interconnected AWS services. More important than the number of services is that
-I understand **why** each one was chosen over the alternatives. For example, I
-can explain why DynamoDB rather than RDS suited this problem, and why the CLIP
-model could not be deployed to Lambda.
+Before the internship my understanding of cloud computing stopped at the
+conceptual level. By the end I had deployed a complete system of seven
+interconnected AWS services, and more importantly I could explain **why** each
+service was chosen over the alternatives. For instance, I can argue why DynamoDB
+suited this problem better than RDS, and why the CLIP model could not go on
+Lambda.
 
-My weakest area is networking. The project used a serverless architecture, so I
-barely touched VPCs, subnets or security groups. This is a gap I need to close
-on my own.
+My weak area is networking. The serverless architecture meant I barely touched
+VPCs, subnets or security groups. This is a gap I need to close myself.
 
-#### Problem-solving
+**Learning ability — Strong**
 
-This is where I improved the most, and also the hardest thing to prove with a
-certificate.
+The programme runs on self-study with no step-by-step guidance. I found this hard
+at first, being used to detailed instructions, but it forced me to read official
+AWS documentation instead of looking for ready-made answers.
 
-Early on, when something failed I would try things at random until it worked,
-and afterwards I still would not know why. Over time I built the habit of
-reading error messages carefully, identifying which layer the failure belonged
-to, then testing each layer from the inside out.
+I also came to see the difference between making a system work and understanding
+why it works. There were parts I built by following a guide where everything ran
+correctly, yet when something broke I had no idea where to start. I then spent
+time re-reading the code and rebuilding small components myself.
 
-A concrete example: after uploading a new build to S3, the website rendered
-blank. I spent a long time checking the source code before realising CloudFront
-was still serving the cached old version. The next time I saw similar symptoms,
-cache was the first thing I checked.
+**Initiative — Strong**
 
-#### Self-directed learning
+When the first recommendation model performed poorly, I did not simply report the
+numbers. I analysed the cause, found the problem lay in the uniformly random
+data, and proposed and implemented a regenerated dataset simulating real
+behaviour. Metrics improved by 2.8 to 5.9 times.
 
-The programme runs on self-study with no step-by-step guidance. At first I found
-this difficult because I was used to detailed instructions. But it forced me to
-read the official AWS documentation instead of hunting for ready-made answers.
+I also set up budget alerts and ran a security review without being asked.
 
-I also came to recognise the difference between **making a system work** and
-**understanding why it works**. There were parts I built by following a guide
-where everything ran correctly, yet when something broke I had no idea where to
-start. Later I spent time re-reading the code and rebuilding small components
-myself, and my troubleshooting ability improved noticeably.
+**Discipline — Good**
 
-#### Teamwork
+I kept to the planned schedule and hit the milestones on time. However, my first
+two weeks of study lacked direction because no project had been chosen yet,
+wasting time. If I did this again I would settle the topic sooner so the learning
+had focus.
 
-I served as Cloud Architect in a five-person team, responsible for the
-infrastructure and architectural decisions, and for deploying my teammates' code
-to the live environment.
+**Communication — Good**
+
+The Cloud Architect role required working with teammates from different
+specialities. I had to explain infrastructure concepts in plain language to
+someone unfamiliar with AWS terminology, and conversely understand requirements
+from the frontend and data sides. This is a skill I can perform but have not yet
+mastered.
+
+**Teamwork — Fair to good**
 
 What I did well was spotting early that the frontend and backend data contracts
 had diverged, and choosing an adapter layer rather than making both sides patch
-each other. That preserved the already-tested work on both sides.
+each other, preserving the tested work on both sides.
 
-What I did poorly was **failing to agree on data conventions with the whole team
-at the start**. As a result, our data engineer's pipeline produced identifiers
-that did not match the real catalogue, so its output could not be loaded into
-the model. She had to raise it with me before I noticed. If I did this again, I
-would spend the first session of the project writing down the data formats
-exchanged between components.
+What I did poorly was failing to agree data conventions with the whole team from
+the start. As a result our data engineer's pipeline produced identifiers that did
+not match the real catalogue, so its output could not be loaded into the model,
+and she had to raise it before I noticed. This was my shortcoming as architect,
+since defining the data interfaces between components was my responsibility.
 
-#### Security and cost awareness
+**Problem solving — Good**
 
-While handing over source code, the team accidentally leaked an AWS access key
-inside an archive shared through a cloud storage service. The impact was low
-because that key had read-only permissions, but it was still a real security
-incident.
+Early on, when something failed I would try things at random until it worked, and
+still not know why. Over time I built the habit of reading error messages
+carefully, identifying which layer had failed, then testing each layer from the
+inside out.
 
-I took away a lesson that theory cannot teach: the principle of least privilege
-does not prevent human error, but it determines how much damage that error
-causes. After the incident we moved to centralised source control on Git and
-issued individual, scope-limited accounts.
+One example: after uploading a new build to S3 the site rendered blank. I spent a
+long time checking code before realising CloudFront was serving a cached old
+version. Next time I saw those symptoms, I checked cache first.
 
-On cost, I learned that not every service bills by usage. A Personalize campaign
-bills per hour it exists regardless of query volume. That changed how I think
-about cleaning up resources.
+A harder example: DynamoDB does not guarantee results in the order keys are
+passed in, so the model's ranking was being lost. This produced no error message
+and was only detectable by carefully comparing the returned data.
 
-#### Self-rating
+**Contribution to the project — Strong**
 
-| Criterion | Level | Notes |
-|---|---|---|
-| Core AWS service knowledge | Good | Solid on serverless, weak on networking |
-| Architecture design | Good | Can weigh trade-offs, no large-scale experience |
-| Troubleshooting | Good | Clear improvement over the term |
-| Self-directed learning | Strong | Proactively reads primary documentation |
-| Teamwork | Fair to good | Fell short on agreeing conventions early |
-| Security awareness | Good | Right instincts, needs more care when sharing files |
+I owned the entire AWS infrastructure and the architectural decisions, deployed
+my teammates' code to the live environment, built the adapter layer resolving the
+data contract mismatch, set up and improved the recommendation engine, and
+managed security and cost.
 
-#### Next steps
+The contribution I value most is not the number of services deployed, but
+identifying that the problem lay in the data rather than the algorithm, and
+proving it with quantitative evidence.
+
+#### Development plan
 
 I plan to study towards the **AWS Solutions Architect Associate** certification
-and to rebuild a small project from scratch to test what I have learned. For my
-weak areas, I will focus on AWS networking and container services.
+and rebuild a small project from scratch to test what I have learned. For my weak
+areas I will focus on AWS networking and container services such as ECS and EKS.

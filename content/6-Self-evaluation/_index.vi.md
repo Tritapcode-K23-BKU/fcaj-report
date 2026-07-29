@@ -6,96 +6,105 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-#### Tổng quan
+#### Bảng tự đánh giá
 
-Kỳ thực tập tại First Cloud AI Journey là lần đầu tiên em làm việc với hạ tầng
-đám mây thật, nơi mọi thao tác sai đều để lại hậu quả thật. Phần tự đánh giá này
-em viết theo hướng thẳng thắn, ghi cả những chỗ làm được lẫn những chỗ chưa tốt.
+| Tiêu chí | Mức độ | Nhận xét |
+|---|---|---|
+| Kiến thức | Khá | Vững phần serverless, còn yếu mạng và container |
+| Khả năng học hỏi | Tốt | Chủ động đọc tài liệu gốc thay vì tìm lời giải có sẵn |
+| Tính chủ động | Tốt | Tự đề xuất cải tiến dữ liệu khi mô hình cho kết quả kém |
+| Kỷ luật | Khá | Bám sát tiến độ, nhưng có giai đoạn đầu học chưa có định hướng |
+| Giao tiếp | Khá | Diễn đạt được vấn đề kỹ thuật cho người không cùng chuyên môn |
+| Teamwork | Trung bình khá | Thiếu sót ở khâu thống nhất quy ước dữ liệu từ đầu |
+| Giải quyết vấn đề | Khá | Tiến bộ rõ rệt về khả năng chẩn đoán lỗi theo lớp |
+| Đóng góp cho dự án | Tốt | Phụ trách toàn bộ hạ tầng và các quyết định kiến trúc |
 
-#### Kiến thức chuyên môn
+#### Nhận xét chi tiết theo từng tiêu chí
 
-Trước kỳ thực tập, hiểu biết của em về điện toán đám mây dừng ở mức khái niệm:
-biết đám mây là thuê máy chủ của người khác, biết tên một vài dịch vụ, nhưng
-chưa từng dựng một hệ thống hoàn chỉnh.
+**Kiến thức — Khá**
 
-Sau kỳ thực tập, em đã tự triển khai được một hệ thống chạy thật trên Internet
-gồm bảy dịch vụ AWS kết nối với nhau. Quan trọng hơn số lượng dịch vụ là việc em
-hiểu **vì sao** chọn dịch vụ này chứ không phải dịch vụ kia. Ví dụ, em có thể
-giải thích tại sao dùng DynamoDB thay vì RDS cho bài toán này, và tại sao mô
-hình CLIP không đưa lên Lambda được.
+Trước kỳ thực tập, hiểu biết của em về điện toán đám mây dừng ở mức khái niệm.
+Sau kỳ thực tập, em triển khai được một hệ thống hoàn chỉnh gồm bảy dịch vụ AWS
+kết nối với nhau, và quan trọng hơn là giải thích được **vì sao** chọn dịch vụ
+này thay vì dịch vụ kia. Ví dụ em có thể lập luận tại sao dùng DynamoDB thay vì
+RDS, và tại sao mô hình CLIP không đưa lên Lambda được.
 
-Điểm em thấy mình còn yếu là phần mạng. Kiến trúc dự án là serverless nên gần
-như không đụng tới VPC, subnet, security group. Đây là mảng em cần tự bổ sung.
+Điểm còn yếu là mạng. Kiến trúc dự án là serverless nên gần như không đụng tới
+VPC, subnet, security group. Đây là mảng em cần tự bổ sung.
 
-#### Kỹ năng giải quyết vấn đề
-
-Đây là phần em thấy mình tiến bộ rõ nhất, và cũng là phần khó đo bằng chứng chỉ.
-
-Giai đoạn đầu, khi hệ thống báo lỗi em thường thử ngẫu nhiên cho tới khi chạy
-được, xong cũng không biết vì sao nó chạy. Về sau em hình thành thói quen đọc
-thông báo lỗi kỹ, xác định lỗi thuộc lớp nào, rồi kiểm tra từng lớp một từ trong
-ra ngoài.
-
-Một ví dụ cụ thể: có lần sau khi tải bản build mới lên S3 thì trang web hiển thị
-trắng. Em mất khá nhiều thời gian kiểm tra lại mã nguồn trước khi nhận ra nguyên
-nhân là CloudFront vẫn phục vụ bản cũ trong bộ nhớ đệm. Lần sau gặp hiện tượng
-tương tự, em kiểm tra cache trước tiên.
-
-#### Tinh thần tự học
+**Khả năng học hỏi — Tốt**
 
 Chương trình vận hành theo hình thức tự học, không có ai chỉ từng bước. Ban đầu
-em thấy khó vì quen được hướng dẫn chi tiết. Nhưng chính điều đó buộc em phải
-đọc tài liệu chính thức của AWS thay vì tìm lời giải có sẵn.
+em thấy khó vì quen được hướng dẫn chi tiết, nhưng chính điều đó buộc em đọc tài
+liệu chính thức của AWS thay vì tìm lời giải có sẵn.
 
-Em cũng nhận ra khác biệt giữa **làm cho hệ thống chạy được** và **hiểu vì sao
-nó chạy được**. Có những phần em làm theo hướng dẫn và hệ thống chạy đúng, nhưng
-khi gặp lỗi lại không biết bắt đầu từ đâu. Về sau em dành thời gian đọc lại mã
-nguồn và tự dựng lại từng thành phần nhỏ, khả năng xử lý sự cố cải thiện rõ rệt.
+Em cũng nhận ra khác biệt giữa làm cho hệ thống chạy được và hiểu vì sao nó chạy
+được. Có những phần em làm theo hướng dẫn và hệ thống chạy đúng, nhưng khi gặp
+lỗi lại không biết bắt đầu từ đâu. Sau đó em dành thời gian đọc lại mã nguồn và
+tự dựng lại từng thành phần nhỏ.
 
-#### Làm việc nhóm
+**Tính chủ động — Tốt**
 
-Em đảm nhận vai trò Cloud Architect trong nhóm năm người, phụ trách hạ tầng và
-các quyết định kiến trúc, đồng thời triển khai mã nguồn của các thành viên khác
-lên môi trường thật.
+Khi mô hình gợi ý đầu tiên cho kết quả kém, em không dừng ở việc báo cáo con số
+mà tự phân tích nguyên nhân, phát hiện vấn đề nằm ở dữ liệu ngẫu nhiên đều, rồi
+đề xuất và thực hiện việc sinh lại bộ dữ liệu mô phỏng hành vi thật. Kết quả cải
+thiện từ 2,8 đến 5,9 lần trên các chỉ số.
+
+Em cũng chủ động thiết lập cảnh báo ngân sách và rà soát bảo mật mà không đợi
+được yêu cầu.
+
+**Kỷ luật — Khá**
+
+Em bám sát tiến độ đã đề ra và hoàn thành các mốc đúng hạn. Tuy nhiên giai đoạn
+hai tuần đầu em học khá lan man vì chưa có đề tài cụ thể, dẫn tới lãng phí thời
+gian. Nếu làm lại, em sẽ chốt đề tài sớm hơn để việc học có định hướng.
+
+**Giao tiếp — Khá**
+
+Vai trò Cloud Architect đòi hỏi trao đổi với các thành viên có chuyên môn khác
+nhau. Em phải diễn đạt các khái niệm hạ tầng bằng ngôn ngữ đời thường cho bạn
+không quen thuật ngữ AWS, và ngược lại phải hiểu yêu cầu từ phía giao diện và dữ
+liệu. Đây là kỹ năng em thấy mình làm được nhưng chưa thật sự thuần thục.
+
+**Teamwork — Trung bình khá**
 
 Việc em làm tốt là phát hiện sớm chỗ lệch hợp đồng dữ liệu giữa giao diện và máy
-chủ, và chọn giải pháp lớp trung gian thay vì bắt hai bên sửa chéo. Cách này giữ
-được phần đã kiểm thử của cả hai người.
+chủ, và chọn giải pháp lớp trung gian thay vì bắt hai bên sửa chéo, giữ được
+phần đã kiểm thử của cả hai người.
 
-Việc em làm chưa tốt là **không thống nhất quy ước dữ liệu với cả nhóm ngay từ
-đầu**. Hệ quả là pipeline của bạn phụ trách dữ liệu sinh ra định danh khác với
-catalog thật, dẫn tới không nạp vào mô hình được. Bạn ấy phải chủ động nhắn hỏi
-em mới phát hiện ra. Nếu làm lại, em sẽ dành một buổi đầu dự án để chốt bằng văn
-bản định dạng dữ liệu trao đổi giữa các phần.
+Việc em làm chưa tốt là không thống nhất quy ước dữ liệu với cả nhóm ngay từ
+đầu. Hệ quả là pipeline của bạn phụ trách dữ liệu sinh ra định danh khác với
+catalog thật, dẫn tới không nạp vào mô hình được, và bạn ấy phải chủ động nhắn
+hỏi em mới phát hiện ra. Đây là thiếu sót của em ở vai trò kiến trúc sư, vì việc
+định nghĩa giao diện dữ liệu giữa các phần thuộc trách nhiệm của em.
 
-#### Ý thức bảo mật và chi phí
+**Giải quyết vấn đề — Khá**
 
-Trong quá trình bàn giao mã nguồn, nhóm đã để lọt một access key AWS vào gói
-source chia sẻ qua dịch vụ lưu trữ đám mây. Mức độ ảnh hưởng thấp vì khoá đó chỉ
-có quyền đọc, nhưng đây vẫn là sự cố bảo mật thật.
+Giai đoạn đầu, khi hệ thống báo lỗi em thường thử ngẫu nhiên cho tới khi chạy
+được, xong cũng không biết vì sao. Về sau em hình thành thói quen đọc thông báo
+lỗi kỹ, xác định lỗi thuộc lớp nào, rồi kiểm tra từng lớp từ trong ra ngoài.
 
-Em rút ra được bài học mà lý thuyết không dạy được: nguyên tắc quyền tối thiểu
-không ngăn được sai sót của con người, nhưng quyết định mức độ thiệt hại khi sai
-sót xảy ra. Sau sự cố, nhóm chuyển sang quản lý mã nguồn tập trung trên Git và
-cấp tài khoản riêng có giới hạn cho từng người.
+Một ví dụ: sau khi tải bản build mới lên S3 thì trang web hiển thị trắng. Em mất
+nhiều thời gian kiểm tra mã nguồn trước khi nhận ra CloudFront vẫn phục vụ bản
+cũ trong bộ nhớ đệm. Lần sau gặp hiện tượng tương tự, em kiểm tra cache trước.
 
-Về chi phí, em học được rằng không phải dịch vụ nào cũng tính phí theo mức sử
-dụng. Personalize campaign tính phí theo giờ tồn tại bất kể có truy vấn hay
-không. Điều này thay đổi cách em nghĩ về việc dọn dẹp tài nguyên.
+Một ví dụ khác khó hơn: DynamoDB không đảm bảo trả kết quả theo thứ tự khoá được
+truyền vào, khiến thứ hạng do mô hình tính toán bị mất. Lỗi này không sinh ra
+thông báo nào, chỉ phát hiện được khi so sánh kỹ dữ liệu trả về.
 
-#### Bảng tự chấm
+**Đóng góp cho dự án — Tốt**
 
-| Tiêu chí | Mức độ | Ghi chú |
-|---|---|---|
-| Kiến thức dịch vụ AWS cốt lõi | Khá | Vững phần serverless, còn yếu phần mạng |
-| Khả năng thiết kế kiến trúc | Khá | Biết cân nhắc đánh đổi, chưa có kinh nghiệm quy mô lớn |
-| Kỹ năng chẩn đoán sự cố | Khá | Tiến bộ rõ so với đầu kỳ |
-| Tinh thần tự học | Tốt | Chủ động đọc tài liệu gốc |
-| Làm việc nhóm | Trung bình khá | Thiếu sót ở khâu thống nhất quy ước từ đầu |
-| Ý thức bảo mật | Khá | Có nền tảng đúng, cần cẩn thận hơn khi chia sẻ file |
+Em phụ trách toàn bộ hạ tầng AWS và các quyết định kiến trúc, triển khai mã
+nguồn của các thành viên khác lên môi trường thật, xây dựng lớp trung gian xử lý
+lệch hợp đồng dữ liệu, thiết lập và cải tiến hệ gợi ý, và quản lý bảo mật cùng
+chi phí.
 
-#### Kế hoạch tiếp theo
+Đóng góp em thấy có giá trị nhất không phải số lượng dịch vụ dựng được, mà là
+việc phát hiện ra vấn đề nằm ở dữ liệu chứ không phải thuật toán, và chứng minh
+được bằng số liệu định lượng.
 
-Em dự định học tiếp để thi chứng chỉ **AWS Solutions Architect Associate**,
-đồng thời tự dựng lại một dự án nhỏ từ đầu để kiểm chứng những gì đã học. Về
-phần còn yếu, em sẽ tập trung vào mạng trong AWS và các dịch vụ container.
+#### Hướng phát triển
+
+Em dự định học tiếp để thi chứng chỉ **AWS Solutions Architect Associate**, đồng
+thời tự dựng lại một dự án nhỏ từ đầu để kiểm chứng những gì đã học. Về phần còn
+yếu, em sẽ tập trung vào mạng trong AWS và các dịch vụ container như ECS, EKS.
