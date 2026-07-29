@@ -1,58 +1,44 @@
 ---
-title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+title: "Tuần 6"
+date: 2026-07-29
+weight: 6
 chapter: false
-pre: " <b> 1.6. </b> "
+pre: " <b> 1.6 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+#### Tuần 6 — Tích hợp giao diện với API thật
 
-### Mục tiêu tuần 6:
+**Thời gian:** 06/07 - 12/07/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Nối toàn bộ giao diện React với API thật
+- Xử lý lệch hợp đồng dữ liệu giữa giao diện và máy chủ
+- Triển khai giao diện lên S3 và CloudFront
+- Kiểm tra các luồng nghiệp vụ đầu cuối
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Trong quá trình tích hợp phát hiện giao diện và máy chủ được phát triển song song
+nên hợp đồng dữ liệu lệch nhau ở nhiều điểm: phương thức thanh toán, trạng thái
+đơn hàng, tên trường giá và mã giảm giá đều khác nhau.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Cân nhắc ba phương án: sửa máy chủ, sửa giao diện, hoặc chèn lớp trung gian. Chọn
+phương án thứ ba vì giữ nguyên được phần đã kiểm thử của cả hai bên. Toàn bộ việc
+chuyển đổi được tập trung vào một file duy nhất, dịch dữ liệu theo cả hai chiều.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Build giao diện, tải lên S3 và tạo invalidation cho CloudFront. Kiểm tra các
+luồng: đăng ký, đăng nhập, duyệt sản phẩm, thêm giỏ, áp mã giảm giá, đặt hàng,
+xem lịch sử đơn.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Kết quả đạt được
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Website hoàn chỉnh chạy trên CloudFront với đầy đủ luồng nghiệp vụ
+- Lớp trung gian xử lý lệch hợp đồng, ranh giới giữa hai tầng trở nên tường minh
+- Máy chủ tính lại tổng tiền phía server, không tin dữ liệu từ trình duyệt
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+#### Khó khăn và cách xử lý
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Khối lượng công việc để nối các phần do nhiều người viết lớn hơn nhiều so với dự
+tính. Bài học rút ra là hợp đồng dữ liệu giữa các tầng cần được thống nhất bằng
+văn bản ngay từ đầu, trước khi bất kỳ bên nào bắt đầu viết mã.

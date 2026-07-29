@@ -1,59 +1,59 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+title: "Tuần 8"
+date: 2026-07-29
+weight: 8
 chapter: false
-pre: " <b> 1.8. </b> "
+pre: " <b> 1.8 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+#### Tuần 8 — Cải tiến dữ liệu và huấn luyện lại
 
-### Mục tiêu tuần 8:
+**Thời gian:** 20/07 - 26/07/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Phân tích nguyên nhân mô hình cho kết quả kém
+- Xây dựng bộ dữ liệu mô phỏng hành vi mua sắm thật
+- Huấn luyện lại và so sánh chỉ số hai phiên bản
+- Xử lý sự cố bảo mật phát sinh trong quá trình bàn giao
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 8:
+Phân tích lại bộ dữ liệu đầu tiên và nhận ra nguyên nhân: thuật toán lọc cộng tác
+hoạt động bằng cách tìm các nhóm người dùng có hành vi tương tự. Nếu mọi người
+đều tương tác ngẫu nhiên thì không tồn tại nhóm nào để tìm. Đổi thuật toán không
+giải quyết được vấn đề này.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Viết lại chương trình sinh dữ liệu, mô phỏng năm đặc điểm của hành vi thật: gom
+theo phiên truy cập, phễu chuyển đổi xem rồi thêm giỏ rồi mua, phân phối
+power-law, nhịp theo giờ trong ngày, và phân khúc người dùng theo sở thích. Kết
+quả là 23.377 lượt tương tác của 200 người dùng.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Huấn luyện lại trên cùng recipe và so sánh chỉ số với phiên bản trước. Chuyển
+campaign sang solution version mới.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Trong quá trình bàn giao mã nguồn, phát hiện một gói source chia sẻ qua dịch vụ
+lưu trữ đám mây có chứa file cấu hình với access key AWS. Thu hồi khoá ngay và
+thay đổi quy trình bàn giao.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Kết quả đạt được
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+Chỉ số cải thiện rõ rệt trên toàn bộ các phép đo:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+| Chỉ số | Dữ liệu v1 | Dữ liệu v2 | Cải thiện |
+|---|---|---|---|
+| Precision@5 | 0,0889 | 0,4348 | 4,9 lần |
+| NDCG@10 | 0,1799 | 0,6512 | 3,6 lần |
+| MRR@25 | 0,1216 | 0,7130 | 5,9 lần |
+| Coverage | 0,8218 | 0,9505 | tăng 15,7% |
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+Kết luận: chất lượng dữ liệu huấn luyện quyết định hiệu năng mô hình nhiều hơn
+việc lựa chọn thuật toán.
 
+#### Khó khăn và cách xử lý
 
+Sự cố lộ access key là bài học đáng nhớ nhất. Mức độ ảnh hưởng thấp vì khoá đó
+chỉ có quyền đọc, và đó chính là kết quả của việc áp dụng nguyên tắc quyền tối
+thiểu từ đầu. Bài học: nguyên tắc này không ngăn được sai sót, nhưng quyết định
+mức độ thiệt hại khi sai sót xảy ra. Nhóm chuyển sang quản lý mã nguồn tập trung
+trên Git thay vì chia sẻ file nén.

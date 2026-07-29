@@ -1,59 +1,47 @@
 ---
-title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+title: "Tuần 5"
+date: 2026-07-29
+weight: 5
 chapter: false
-pre: " <b> 1.5. </b> "
+pre: " <b> 1.5 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+#### Tuần 5 — Triển khai lớp API
 
-### Mục tiêu tuần 5:
+**Thời gian:** 29/06 - 05/07/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Tạo IAM role cho Lambda theo nguyên tắc quyền tối thiểu
+- Triển khai mã nguồn API của bạn backend lên Lambda
+- Cấu hình API Gateway với 22 route
+- Bật CORS cho giao diện gọi được API
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 5:
+Tạo IAM role riêng cho Lambda, chỉ cấp quyền đọc ghi trên 8 bảng DynamoDB và gọi
+`personalize:GetRecommendations` trên đúng một campaign. Không dùng policy quản
+lý sẵn có phạm vi rộng.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Đóng gói mã nguồn của bạn phụ trách backend cùng thư viện phụ thuộc thành file
+zip và tải lên Lambda. Điều chỉnh timeout lên 30 giây và bộ nhớ lên 512 MB vì mặc
+định 3 giây không đủ khi gọi dịch vụ ngoài.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Tạo HTTP API với route bắt tất cả `/{proxy+}`, để mã nguồn tự định tuyến bên
+trong. Cách này giữ cấu hình API Gateway đơn giản với 22 route.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Cấu hình CORS để giao diện chạy trên tên miền CloudFront gọi được API ở tên miền
+khác.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Kết quả đạt được
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- API hoạt động, gọi được từ Internet, trả về dữ liệu thật từ DynamoDB
+- IAM role tuân thủ nguyên tắc quyền tối thiểu
+- Toàn bộ 22 route được kiểm tra bằng dòng lệnh
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+#### Khó khăn và cách xử lý
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Giao diện báo không kết nối được máy chủ trong khi thử bằng `curl` vẫn chạy bình
+thường. Sau khi mở Developer Tools mới thấy lỗi CORS. Em học được rằng lỗi CORS
+chỉ xuất hiện ở trình duyệt, nên khi gỡ lỗi phải kiểm tra ở đúng môi trường mà
+người dùng thật sử dụng.

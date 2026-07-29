@@ -1,57 +1,42 @@
 ---
-title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 2"
+date: 2026-07-29
+weight: 2
 chapter: false
-pre: " <b> 1.2. </b> "
+pre: " <b> 1.2 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+#### Week 2 — Serverless architecture
 
-### Week 2 Objectives:
+**Dates:** 08/06 - 14/06/2026
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+#### Goals
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Understand serverless compute and when it is appropriate
+- Deploy a first Lambda function
+- Connect Lambda to API Gateway to create an Internet-reachable endpoint
+- Get familiar with DynamoDB and the NoSQL data model
 
+#### Work carried out
 
-### Week 2 Achievements:
+Wrote and deployed a simple Node.js Lambda function, experimenting with
+different timeout and memory settings to observe the effect.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Created an HTTP API in API Gateway, wired it to Lambda and tested it with `curl`.
+Studied the event structure API Gateway passes to Lambda.
 
-* Successfully created and configured an AWS Free Tier account.
+Created a first DynamoDB table and practised PutItem, GetItem, Query and Scan.
+Compared the cost and speed of Query versus Scan on the same table.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Results
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Deployed a complete API running on the Internet with no servers to manage
+- Understood the fundamental difference between Query and Scan in DynamoDB
+- Realised NoSQL table design follows access patterns rather than normalisation
 
-* Used AWS CLI to perform basic operations such as:
+#### Difficulties and how they were resolved
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+I hit a problem where Lambda called DynamoDB and returned a permissions error.
+Re-reading the documentation, I learned that Lambda uses an execution role rather
+than the creator's credentials. This was the first time IAM felt practical rather
+than theoretical.

@@ -1,59 +1,45 @@
 ---
-title: "Worklog Tuần 3"
-date: 2024-01-01
-weight: 1
+title: "Tuần 3"
+date: 2026-07-29
+weight: 3
 chapter: false
-pre: " <b> 1.3. </b> "
+pre: " <b> 1.3 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+#### Tuần 3 — Chọn đề tài và thiết kế kiến trúc
 
-### Mục tiêu tuần 3:
+**Thời gian:** 15/06 - 21/06/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Chốt đề tài dự án cuối kỳ cho nhóm
+- Thiết kế kiến trúc tổng thể và lựa chọn dịch vụ
+- Phân công nhiệm vụ giữa năm thành viên
+- Ước lượng chi phí và đặt cảnh báo ngân sách
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 3:
+Nhóm thảo luận và chốt đề tài hệ gợi ý sản phẩm thương mại điện tử. Lý do chọn:
+bài toán có giá trị thực tế rõ ràng, sử dụng được nhiều dịch vụ AWS liên kết với
+nhau, và có phần học máy nhưng không đòi hỏi tự cài đặt thuật toán.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Thiết kế kiến trúc hai nhánh: nhánh tĩnh qua CloudFront và S3, nhánh động qua
+API Gateway và Lambda. So sánh các phương án trước khi quyết định, ghi lại lập
+luận cho từng lựa chọn.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Phân công: em nhận vai trò Cloud Architect, phụ trách hạ tầng và các quyết định
+kiến trúc. Bốn bạn còn lại phụ trách backend, frontend, học máy và dữ liệu.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Đặt AWS Budgets với ngưỡng cảnh báo để tránh phát sinh chi phí ngoài dự kiến.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Kết quả đạt được
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Sơ đồ kiến trúc tổng thể hoàn chỉnh, có lập luận cho từng lựa chọn dịch vụ
+- Bảng phân công nhiệm vụ rõ ràng cho năm thành viên
+- Cảnh báo ngân sách đã hoạt động
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+#### Khó khăn và cách xử lý
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Nhóm mất khá nhiều thời gian ở khâu chọn đề tài vì không biết phạm vi nào là vừa
+sức trong thời gian có hạn. Ban đầu có ý tưởng làm hệ thống lớn hơn nhiều, sau
+phải cắt bớt để đảm bảo hoàn thành được.

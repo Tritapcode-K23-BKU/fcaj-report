@@ -1,57 +1,44 @@
 ---
-title: "Week 1 Worklog"
-date: 2024-01-01
+title: "Week 1"
+date: 2026-07-29
 weight: 1
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: " <b> 1.1 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+#### Week 1 — AWS fundamentals, IAM and S3
 
-### Week 1 Objectives:
+**Dates:** 01/06 - 07/06/2026
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+#### Goals
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Understand the shared responsibility model between AWS and the customer
+- Learn identity and access management with IAM
+- Get familiar with object storage on S3
+- Set up the working environment: AWS account and AWS CLI
 
+#### Work carried out
 
-### Week 1 Achievements:
+Completed the foundational modules in the programme curriculum. Created my own
+AWS account, configured the AWS CLI and verified my identity with
+`aws sts get-caller-identity`.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Practised permissions: created IAM users, attached policies, and compared
+managed policies against custom-written ones. Created S3 buckets, tested
+different access settings and observed the effect of Block Public Access.
 
-* Successfully created and configured an AWS Free Tier account.
+Read documentation on the principle of least privilege and how it applies in
+practice.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### Results
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Working environment ready, comfortable with both the console and the CLI
+- Understood why the root account should not be used for daily work
+- Learned the structure of an IAM policy: Effect, Action, Resource
 
-* Used AWS CLI to perform basic operations such as:
+#### Difficulties and how they were resolved
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+The biggest difficulty was feeling overwhelmed by the sheer number of AWS
+services. Without a concrete problem to solve, it was hard to know what to learn
+first. I decided to follow the programme curriculum closely rather than reading
+without direction.

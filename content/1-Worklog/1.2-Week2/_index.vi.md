@@ -1,59 +1,41 @@
 ---
-title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+title: "Tuần 2"
+date: 2026-07-29
+weight: 2
 chapter: false
-pre: " <b> 1.2. </b> "
+pre: " <b> 1.2 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+#### Tuần 2 — Kiến trúc không máy chủ
 
-### Mục tiêu tuần 2:
+**Thời gian:** 08/06 - 14/06/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Hiểu mô hình tính toán không máy chủ và khi nào nên dùng
+- Triển khai được hàm Lambda đầu tiên
+- Nối Lambda với API Gateway để tạo endpoint gọi được từ Internet
+- Làm quen với DynamoDB và mô hình dữ liệu NoSQL
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 2:
+Viết và triển khai hàm Lambda đơn giản bằng Node.js, thử nghiệm với các mức
+timeout và bộ nhớ khác nhau để quan sát ảnh hưởng.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Tạo HTTP API trên API Gateway, nối với Lambda và gọi thử bằng `curl`. Tìm hiểu
+cấu trúc sự kiện mà API Gateway gửi sang Lambda.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Tạo bảng DynamoDB đầu tiên, thực hành các thao tác PutItem, GetItem, Query và
+Scan. So sánh chi phí và tốc độ giữa Query và Scan trên cùng một bảng.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Kết quả đạt được
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Triển khai được một API hoàn chỉnh chạy trên Internet, không cần máy chủ
+- Hiểu được sự khác biệt căn bản giữa Query và Scan trong DynamoDB
+- Nhận ra thiết kế bảng NoSQL phải đi theo mẫu truy vấn, không phải chuẩn hoá
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### Khó khăn và cách xử lý
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Gặp khó khi Lambda gọi DynamoDB nhưng báo lỗi không đủ quyền. Sau khi đọc lại
+tài liệu mới hiểu Lambda dùng execution role chứ không dùng credential của người
+tạo. Đây là lần đầu em thấy IAM có tác dụng thực tế chứ không chỉ là lý thuyết.

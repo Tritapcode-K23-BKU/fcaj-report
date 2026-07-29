@@ -1,59 +1,46 @@
 ---
-title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+title: "Tuần 4"
+date: 2026-07-29
+weight: 4
 chapter: false
-pre: " <b> 1.4. </b> "
+pre: " <b> 1.4 </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+#### Tuần 4 — Dựng lớp lưu trữ và cơ sở dữ liệu
 
-### Mục tiêu tuần 4:
+**Thời gian:** 22/06 - 28/06/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Tạo bucket S3 cho giao diện và cho dữ liệu huấn luyện
+- Cấu hình CloudFront với Origin Access Control
+- Tạo 8 bảng DynamoDB theo thiết kế
+- Nạp dữ liệu mẫu 100 sản phẩm
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 4:
+Tạo hai bucket S3 với vai trò tách biệt. Bucket giao diện được giữ riêng tư hoàn
+toàn, chỉ CloudFront truy cập được thông qua Origin Access Control thay vì mở
+public như nhiều hướng dẫn cũ.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Cấu hình CloudFront: bật chuyển hướng HTTP sang HTTPS, đặt `index.html` làm
+default root object, và thêm custom error response chuyển lỗi 403 và 404 về
+`index.html` để ứng dụng một trang hoạt động đúng khi mở thẳng đường dẫn con.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Tạo 8 bảng DynamoDB ở chế độ on-demand. Hai bảng Reviews và Orders dùng khoá tổ
+hợp để có thể truy vấn bằng Query thay vì Scan toàn bảng.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+Viết script nạp dữ liệu mẫu cho 100 sản phẩm thuộc 8 danh mục.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+#### Kết quả đạt được
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Giao diện tĩnh phục vụ được qua CloudFront với HTTPS
+- Bucket S3 không truy cập trực tiếp được từ Internet, xác nhận bằng thử nghiệm
+- 8 bảng DynamoDB sẵn sàng với dữ liệu mẫu
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+#### Khó khăn và cách xử lý
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Sau khi tải bản build mới lên S3, trang web hiển thị trắng. Em mất khá nhiều thời
+gian kiểm tra lại mã nguồn trước khi phát hiện nguyên nhân là CloudFront vẫn phục
+vụ bản cũ trong bộ nhớ đệm. Từ đó em ghi nhớ quy tắc: mỗi lần tải file mới lên S3
+bắt buộc phải tạo invalidation.

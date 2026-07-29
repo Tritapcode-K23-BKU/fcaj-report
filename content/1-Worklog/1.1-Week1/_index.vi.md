@@ -1,56 +1,41 @@
 ---
-title: "Worklog Tuần 1"
-date: 2024-01-01
+title: "Tuần 1"
+date: 2026-07-29
 weight: 1
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: " <b> 1.1 </b> "
 ---
 
+#### Tuần 1 — Nền tảng AWS, IAM và S3
 
-### Mục tiêu tuần 1:
+**Thời gian:** 01/06 - 07/06/2026
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+#### Mục tiêu
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Nắm được mô hình trách nhiệm chia sẻ giữa AWS và khách hàng
+- Hiểu cách quản lý danh tính và phân quyền bằng IAM
+- Làm quen với lưu trữ đối tượng trên S3
+- Thiết lập môi trường làm việc: tài khoản AWS, AWS CLI
 
+#### Công việc đã thực hiện
 
-### Kết quả đạt được tuần 1:
+Hoàn thành các bài học nền tảng theo lộ trình của chương trình. Tự tạo tài
+khoản AWS, cấu hình AWS CLI và xác minh danh tính bằng `aws sts get-caller-identity`.
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Thực hành phân quyền: tạo IAM user, gán policy, thử nghiệm sự khác biệt giữa
+policy quản lý sẵn và policy tự viết. Tạo bucket S3, thử các chế độ truy cập
+khác nhau và quan sát tác động của Block Public Access.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+Đọc tài liệu về nguyên tắc quyền tối thiểu và cách áp dụng trong thực tế.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+#### Kết quả đạt được
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+- Môi trường làm việc sẵn sàng, thao tác được cả trên console và dòng lệnh
+- Hiểu được vì sao không nên dùng tài khoản root cho công việc hằng ngày
+- Nắm được cấu trúc của một IAM policy: Effect, Action, Resource
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+#### Khó khăn và cách xử lý
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+Khó khăn lớn nhất là bị ngợp vì AWS có quá nhiều dịch vụ. Khi chưa biết mình
+cần giải quyết bài toán gì thì rất khó xác định nên học cái nào trước. Em quyết
+định bám sát lộ trình của chương trình thay vì đọc lan man.

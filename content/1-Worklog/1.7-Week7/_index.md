@@ -1,57 +1,48 @@
 ---
-title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+title: "Week 7"
+date: 2026-07-29
+weight: 7
 chapter: false
-pre: " <b> 1.7. </b> "
+pre: " <b> 1.7 </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+#### Week 7 — Amazon Personalize setup
 
-### Week 7 Objectives:
+**Dates:** 13/07 - 19/07/2026
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+#### Goals
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Create a dataset group and import interaction data
+- Train a first recommendation model
+- Deploy a campaign for real-time inference
+- Wire recommendations into the home page
 
+#### Work carried out
 
-### Week 7 Achievements:
+Created a dataset group and defined the schema for the Interactions dataset.
+Created an IAM role allowing Personalize to read the data bucket, plus the
+corresponding bucket policy.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+Generated a first interaction dataset of 4,491 events distributed uniformly at
+random. Imported it into Personalize and trained a solution using the
+`aws-user-personalization` recipe.
 
-* Successfully created and configured an AWS Free Tier account.
+When training finished, the evaluation metrics were poor: Precision@5 of only
+0.0889 and MRR@25 of 0.1216.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+I deployed the campaign anyway and wired it into the recommendation route in
+Lambda to complete the technical path, while beginning to analyse why the results
+were so weak.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+#### Results
 
-* Used AWS CLI to perform basic operations such as:
+- A complete technical path: Lambda calls the campaign and returns recommendations
+- A recommendation block rendering on the home page
+- Identified that the problem lay in the data, not the service configuration
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+#### Difficulties and how they were resolved
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+I found a subtle bug that produced no error message: DynamoDB does not guarantee
+results in the order keys are passed in, so the ranking computed by the model was
+being lost. The results had to be re-sorted into the original order after
+querying. This was only detectable by carefully comparing the returned output.
