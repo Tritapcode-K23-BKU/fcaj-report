@@ -1,47 +1,87 @@
 ---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-07-29
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+#### What I valued most about the programme
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+**Working on a real AWS account.** This was the biggest difference from
+classroom learning. When resources cost real money, you are forced to think
+before creating them and to remember to clean up afterwards. That habit does not
+form from paper exercises or simulated environments.
 
-### Overall Evaluation
+**The self-study format.** At first I struggled because nobody walked me through
+each step. After a few weeks I realised this is how real work operates: nobody
+hands you step-by-step instructions, only documentation and a problem to solve.
+Reading primary documentation and diagnosing failures myself are the skills I
+will keep longest.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**The requirement to write the workshop as a lab.** I initially saw this as
+paperwork. Writing it changed my mind: to guide someone else through the same
+build, you have to genuinely understand every step rather than gloss over it.
+Several things I thought I understood turned out to be gaps once I tried to
+write them down.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+#### Difficulties I faced
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**Feeling overwhelmed at the start.** AWS has too many services, and before you
+know what your problem needs, it is hard to know what to learn first. I spent
+roughly the first two weeks reading without direction. Only after settling on a
+project did my learning become focused.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**Cost anxiety.** I felt tense every time I created a new resource, worried I
+would forget to delete it and receive a bill. Learning to set budget alerts made
+me far more comfortable experimenting.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+**Coordination proved harder than the technical work.** Stitching together
+components written by five different people took far longer than I expected.
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+#### Suggestions for the programme
 
----
+I offer these constructively, based on the experience of a complete beginner.
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+**Hold a cost-management session at the very beginning.** Several people in my
+team did not know that some services bill by existence rather than by usage. An
+early briefing on AWS Budgets and a list of services that accrue cost quietly
+would make people more confident about experimenting.
 
----
+**Provide sample project ideas graded by difficulty.** When choosing a topic, my
+team was unsure what scope was realistic in the time available. A reference list
+with rough effort estimates would stop teams from over-scoping and running out
+of time.
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+**Publish a pre-submission checklist.** For example, the minimum number of
+services a workshop must use and which sections are required. I had to read the
+rules page several times to catch everything, and nearly missed the monitoring
+section.
+
+#### Advice for future participants
+
+**Pick a project you can finish rather than one that looks impressive.** A small
+system where you understand every part beats a sprawling one where you cannot
+explain any of it.
+
+**Do not just follow tutorials.** Following along makes things run, but leaves
+you stuck the moment something breaks. At each step, ask what it is for and what
+would happen without it.
+
+**Agree on data formats with your team on day one.** This was my team's most
+expensive lesson. Agreeing before writing code costs almost nothing; fixing it
+after both sides have finished costs a great deal.
+
+**Set a budget alert before creating your first resource.** Five minutes of
+configuration buys peace of mind for the whole term.
+
+**Write down every error and its fix as it happens.** You will need exactly
+those details when writing your report, by which point you will have forgotten
+them.
+
+#### Acknowledgements
+
+I would like to thank the mentors and the AWS Study Group community for their
+support throughout the internship, and my teammates for pulling the project
+together under time pressure. This internship showed me the gap between knowing
+a technology and being able to use it, and that is what I valued most.

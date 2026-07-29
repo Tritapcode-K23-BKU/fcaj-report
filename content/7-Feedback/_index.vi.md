@@ -1,44 +1,82 @@
 ---
-title: "Chia sẻ, đóng góp ý kiến"
-date: 2024-01-01
+title: "Chia sẻ và phản hồi"
+date: 2026-07-29
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+#### Điều em thấy giá trị nhất ở chương trình
 
-### Đánh giá chung
+**Được làm trên tài khoản AWS thật.** Đây là khác biệt lớn nhất so với học trên
+lớp. Khi tài nguyên phát sinh chi phí thật, em buộc phải suy nghĩ trước khi tạo
+và nhớ dọn dẹp sau khi dùng. Thói quen đó không hình thành được nếu chỉ làm bài
+tập trên giấy hay trên môi trường mô phỏng.
 
-**1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+**Hình thức tự học.** Ban đầu em thấy khó vì không có ai chỉ từng bước. Nhưng
+sau vài tuần em nhận ra đây mới là cách làm việc thật: ngoài thực tế cũng không
+ai đưa hướng dẫn từng bước, mà chỉ có tài liệu và vấn đề cần giải quyết. Kỹ năng
+đọc tài liệu chính thức và tự chẩn đoán lỗi là thứ em mang theo được lâu nhất.
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+**Yêu cầu viết workshop dạng lab.** Lúc đầu em nghĩ đây chỉ là thủ tục báo cáo.
+Nhưng khi viết mới thấy: để hướng dẫn người khác làm lại được, mình phải thật sự
+hiểu từng bước chứ không thể viết mơ hồ. Nhiều chỗ em tưởng đã hiểu, tới lúc
+viết ra mới phát hiện là chưa.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+#### Khó khăn gặp phải
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+**Giai đoạn đầu bị ngợp.** AWS có quá nhiều dịch vụ, và khi chưa biết bài toán
+của mình cần gì thì rất khó biết nên học cái nào trước. Em mất khoảng hai tuần
+đầu đọc lan man. Sau khi có đề tài cụ thể thì việc học mới có định hướng.
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+**Chi phí là nỗi lo thường trực.** Em khá căng thẳng mỗi lần tạo tài nguyên mới
+vì sợ quên xoá rồi phát sinh hoá đơn. Đến khi biết đặt cảnh báo ngân sách thì
+mới yên tâm hơn.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+**Phối hợp nhóm khó hơn phần kỹ thuật.** Việc nối các phần do năm người viết lại
+với nhau tốn thời gian hơn nhiều so với dự tính ban đầu.
 
+#### Đề xuất cho chương trình
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+Những góp ý dưới đây em viết với tinh thần xây dựng, dựa trên trải nghiệm của
+một người mới bắt đầu.
 
+**Có một buổi định hướng về quản lý chi phí ngay từ đầu.** Nhiều bạn trong nhóm
+em không biết rằng một số dịch vụ tính phí theo thời gian tồn tại chứ không phải
+theo lượt dùng. Nếu được nhắc sớm về cách đặt AWS Budgets và danh sách các dịch
+vụ dễ phát sinh chi phí, mọi người sẽ tự tin thử nghiệm hơn.
 
-### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+**Gợi ý một số đề tài mẫu theo mức độ khó.** Giai đoạn chọn đề tài, nhóm em khá
+lúng túng vì không biết phạm vi nào là vừa sức trong thời gian có hạn. Một danh
+sách đề tài tham khảo kèm ước lượng công sức sẽ giúp các nhóm không chọn quá
+rộng rồi làm không kịp.
+
+**Có checklist tự kiểm trước khi nộp.** Ví dụ workshop cần tối thiểu bao nhiêu
+dịch vụ, cần có mục nào. Em phải đọc kỹ trang quy định nhiều lần mới nắm hết, và
+suýt bỏ sót phần giám sát.
+
+#### Chia sẻ với các bạn khoá sau
+
+**Chọn đề tài vừa sức, làm cho xong hơn là làm cho hoành tráng.** Một hệ thống
+nhỏ mà bạn hiểu từng bộ phận sẽ tốt hơn một hệ thống nhiều dịch vụ mà bạn không
+giải thích được cái nào.
+
+**Đừng chỉ làm theo hướng dẫn.** Làm theo thì hệ thống sẽ chạy, nhưng lúc gặp
+lỗi bạn sẽ bế tắc. Cứ mỗi bước hãy tự hỏi bước này để làm gì, bỏ đi thì sao.
+
+**Chốt định dạng dữ liệu với nhóm ngay từ buổi đầu.** Đây là bài học đắt nhất
+của nhóm em. Chi phí thống nhất trước khi viết mã gần như bằng không, chi phí
+sửa sau khi cả hai bên đã làm xong thì rất cao.
+
+**Đặt cảnh báo ngân sách trước khi tạo tài nguyên đầu tiên.** Năm phút cấu hình
+đổi lấy sự yên tâm suốt kỳ.
+
+**Ghi lại lỗi và cách sửa ngay khi gặp.** Tới lúc viết báo cáo bạn sẽ cần đúng
+những chi tiết đó, mà lúc đó thì đã quên.
+
+#### Lời cảm ơn
+
+Em xin cảm ơn các anh chị mentor và cộng đồng AWS Study Group đã hỗ trợ trong
+suốt kỳ thực tập. Cảm ơn các bạn trong nhóm đã cùng nhau hoàn thành dự án trong
+thời gian có hạn. Kỳ thực tập này cho em thấy khoảng cách giữa việc biết một
+công nghệ và việc dùng được nó, và đó là điều em thấy giá trị nhất.
