@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 During my internship, I participated in three internal tech seminars. Each one provided new, practical knowledge directly relevant to the cloud architecture work on my team.
 
-### [Event 1](4.1-Tech-Seminar-6-Topics/)
+### [Event 1](4.2-event1/)
 &emsp;**Event Name:** Internal Tech Seminar — 6 Topics (Infrastructure, Cloud, AI, Game Dev, Soft Skills)
 
 &emsp;**Date & Time:** 09:00, June 6, 2026
@@ -19,7 +19,7 @@ During my internship, I participated in three internal tech seminars. Each one p
 
 ---
 
-### [Event 2](4.2-AWS-Ecosystem-Seminar/)
+### [Event 2](4.1-event3/)
 &emsp;**Event Name:** Internal Tech Seminar — AWS Ecosystem: Governance, Security & Optimization
 
 &emsp;**Date & Time:** 09:00, July 11, 2026
@@ -30,7 +30,7 @@ During my internship, I participated in three internal tech seminars. Each one p
 
 ---
 
-### [Event 3](4.3-Agentic-AI-Seminar/)
+### [Event 3](4.1-event1/)
 &emsp;**Event Name:** Internal Tech Seminar — Agentic AI on AWS
 
 &emsp;**Date & Time:** 09:00, July 25, 2026

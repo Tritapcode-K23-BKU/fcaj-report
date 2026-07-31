@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 Trong quá trình thực tập, em đã tham gia 3 buổi sinh hoạt chuyên đề nội bộ. Mỗi buổi đều mang lại kiến thức mới, thực tế và gắn liền với công việc kiến trúc Cloud của nhóm em.
 
-### [Sự kiện 1](4.1-Tech-Seminar-6-Topics/)
+### [Sự kiện 1](4.2-event1//)
 &emsp;**Tên sự kiện:** Buổi sinh hoạt chuyên đề nội bộ — 6 chuyên đề (Hạ tầng, Cloud, AI, Game Dev, Kỹ năng mềm)
 
 &emsp;**Thời gian:** 09:00 ngày 06/06/2026
@@ -19,7 +19,7 @@ Trong quá trình thực tập, em đã tham gia 3 buổi sinh hoạt chuyên đ
 
 ---
 
-### [Sự kiện 2](4.2-AWS-Ecosystem-Seminar/)
+### [Sự kiện 2](4.1-event3/)
 &emsp;**Tên sự kiện:** Buổi sinh hoạt chuyên đề nội bộ — Hệ sinh thái AWS: Quản trị, Bảo mật, Tối ưu
 
 &emsp;**Thời gian:** 09:00 ngày 11/07/2026
@@ -30,7 +30,7 @@ Trong quá trình thực tập, em đã tham gia 3 buổi sinh hoạt chuyên đ
 
 ---
 
-### [Sự kiện 3](4.3-Agentic-AI-Seminar/)
+### [Sự kiện 3](4.1-event1/)
 &emsp;**Tên sự kiện:** Buổi sinh hoạt chuyên đề nội bộ — Ứng dụng Agentic AI trên AWS
 
 &emsp;**Thời gian:** 09:00 ngày 25/07/2026
