@@ -1,5 +1,5 @@
 ---
-title: "Buổi Sinh Hoạt Chuyên Đề — Hệ Sinh Thái AWS: Quản Trị, Bảo Mật, Tối Ưu"
+title: "Sự kiện 2"
 date: 2026-07-11
 weight: 2
 ---
@@ -13,7 +13,7 @@ weight: 2
 
 Tôi tham dự buổi sinh hoạt chuyên đề thứ hai, tập trung vào hệ sinh thái AWS: lộ trình chứng chỉ AWS Cloud Practitioner (CLF-C02), bảo mật ứng dụng tự động dựa trên AI, và tư duy vận hành giám sát gắn với SLA.
 
-*(Ảnh tham dự — xem `events-seminar-2.jpg`...)*
+![Ảnh tham dự](/fcaj-report/images/4-Events/events-seminar-2.jpg)
 
 ### Chuyên đề 1 — Lộ trình chinh phục chứng chỉ AWS Cloud Practitioner (CLF-C02)
 

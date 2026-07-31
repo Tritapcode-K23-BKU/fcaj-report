@@ -1,5 +1,5 @@
 ---
-title: "Events"
+title: "Events 1"
 date: 2026-06-06
 weight: 4
 ---
@@ -13,7 +13,7 @@ weight: 4
 
 I attended an internal tech seminar covering six presentations spanning infrastructure, applied AI/ML, serverless architecture, application packaging, and team collaboration skills. Below is a summary of the key takeaways from each talk.
 
-*(Attendance photo — see `events-seminar-1.jpg` etc.)*
+![Attendance photo](/fcaj-report/images/4-Events/events-seminar-1.jpg)
 
 ### Talk 1 — AWS WAF & ML-based NIDS
 **Speaker:** Le Hoang Gia Dai

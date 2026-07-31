@@ -1,5 +1,5 @@
 ---
-title: "Internal Tech Seminar — AWS Ecosystem: Governance, Security & Optimization"
+title: "Event 2"
 date: 2026-07-11
 weight: 2
 ---
@@ -13,7 +13,7 @@ weight: 2
 
 I attended a second internal seminar focused on the AWS ecosystem, covering the AWS Cloud Practitioner (CLF-C02) certification path, AI-driven application security automation, and operational monitoring practices built around SLAs.
 
-*(Attendance photo — see `events-seminar-2.jpg` etc.)*
+![Attendance photo](/fcaj-report/images/4-Events/events-seminar-2.jpg)
 
 ### Talk 1 — AWS Cloud Practitioner (CLF-C02) Roadmap
 

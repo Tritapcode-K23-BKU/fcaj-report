@@ -15,7 +15,7 @@ One thing to note: the bucket will stay **completely private**. Users never reac
 1. Open the [Amazon S3 console](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1)
 2. Choose **Create bucket**
 3. Fill in:
-   - **Bucket name**: `fcj-recsys-frontend-<your-name>` (bucket names are globally unique, so add a suffix)
+   - **Bucket name**: `fcj-recsys-frontend-tuan2026` (bucket names are globally unique, so add a suffix)
    - **AWS Region**: Asia Pacific (Singapore) `ap-southeast-1`
    - **Block Public Access**: **leave everything enabled**
 4. Choose **Create bucket**
@@ -45,7 +45,7 @@ Do not worry about the API address yet. After you create API Gateway in section 
 #### Step 3. Upload to S3
 
 ```bash
-aws s3 sync dist/ s3://fcj-recsys-frontend-<your-name>/ --delete
+aws s3 sync dist/ s3://fcj-recsys-frontend-tuan2026/ --delete
 ```
 
 The `--delete` flag removes old files no longer present in the new build, so leftovers do not pile up across deployments.
@@ -101,6 +101,6 @@ The interface should render. Product data will be missing because the API does n
 **Remember this one, it will save you hours.** Every time you upload a new build to S3 you **must** create an invalidation, otherwise CloudFront keeps serving the cached old version and you will think your code is broken.
 
 ```bash
-aws cloudfront create-invalidation --distribution-id <YOUR-ID> --paths "/*"
+aws cloudfront create-invalidation --distribution-id <E2II1RNB6NMDRB> --paths "/*"
 ```
 {{% /notice %}}

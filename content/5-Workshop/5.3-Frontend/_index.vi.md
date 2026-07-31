@@ -15,7 +15,7 @@ Trong phần này bạn tạo nơi lưu và nơi phân phối giao diện web. B
 1. Mở [Amazon S3 console](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1)
 2. Chọn **Create bucket**
 3. Điền thông tin:
-   - **Bucket name**: `fcj-recsys-frontend-<tên-bạn>` (tên bucket là duy nhất toàn cầu, thêm hậu tố để tránh trùng)
+   - **Bucket name**: `fcj-recsys-frontend-tuan2026` (tên bucket là duy nhất toàn cầu, thêm hậu tố để tránh trùng)
    - **AWS Region**: Asia Pacific (Singapore) `ap-southeast-1`
    - **Block Public Access**: **giữ nguyên bật tất cả**
 4. Chọn **Create bucket**
@@ -45,7 +45,7 @@ Chưa cần lo địa chỉ API lúc này. Sau khi tạo xong API Gateway ở m�
 #### Bước 3. Tải file lên S3
 
 ```bash
-aws s3 sync dist/ s3://fcj-recsys-frontend-<tên-bạn>/ --delete
+aws s3 sync dist/ s3://fcj-recsys-frontend-tuan2026/ --delete
 ```
 
 Tham số `--delete` xoá những file cũ không còn trong bản build mới, tránh để lại rác qua nhiều lần deploy.
@@ -101,6 +101,6 @@ Giao diện phải hiển thị được. Phần dữ liệu sản phẩm chưa 
 **Ghi nhớ điều này, nó sẽ tiết kiệm cho bạn hàng giờ.** Mỗi lần tải bản build mới lên S3, bạn **bắt buộc** phải tạo invalidation, nếu không CloudFront vẫn phục vụ bản cũ trong bộ nhớ đệm và bạn sẽ tưởng mã nguồn bị lỗi.
 
 ```bash
-aws cloudfront create-invalidation --distribution-id <ID-CUA-BAN> --paths "/*"
+aws cloudfront create-invalidation --distribution-id <E2II1RNB6NMDRB> --paths "/*"
 ```
 {{% /notice %}}

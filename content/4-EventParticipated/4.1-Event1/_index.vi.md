@@ -1,5 +1,5 @@
 ---
-title: "Sự kiện"
+title: "Sự kiện 1"
 date: 2026-06-06
 weight: 4
 ---
@@ -13,7 +13,7 @@ weight: 4
 
 Tôi đã tham dự buổi sinh hoạt chuyên đề nội bộ gồm 6 bài báo cáo, trải dài từ hạ tầng công nghệ, ứng dụng AI/ML, kiến trúc Serverless, đóng gói ứng dụng cho đến kỹ năng làm việc nhóm. Dưới đây là tóm tắt nội dung từng chuyên đề.
 
-*(Ảnh tham dự — xem `events-seminar-1.jpg`...)*
+![Ảnh tham dự](/fcaj-report/images/4-Events/events-seminar-1.jpg)
 
 ### Chuyên đề 1 — AWS WAF & ML NIDS
 **Báo cáo viên:** Lê Hoàng Gia Đại

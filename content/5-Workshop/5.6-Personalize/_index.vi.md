@@ -44,9 +44,9 @@ Kết quả trên cùng một recipe:
 #### Bước 1. Tạo bucket và tải dữ liệu
 
 ```bash
-aws s3 mb s3://fcj-recsys-data-<tên-bạn>
-aws s3 cp interactions.csv s3://fcj-recsys-data-<tên-bạn>/personalize/
-aws s3 cp items.csv s3://fcj-recsys-data-<tên-bạn>/personalize/
+aws s3 mb s3://fcj-recsys-data-tuan.2026
+aws s3 cp interactions.csv s3://fcj-recsys-data-tuan.2026/personalize/
+aws s3 cp items.csv s3://fcj-recsys-data-tuan.2026/personalize/
 ```
 
 #### Bước 2. Cho phép Personalize đọc bucket

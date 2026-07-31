@@ -44,9 +44,9 @@ Results on the same recipe:
 #### Step 1. Create a bucket and upload the data
 
 ```bash
-aws s3 mb s3://fcj-recsys-data-<your-name>
-aws s3 cp interactions.csv s3://fcj-recsys-data-<your-name>/personalize/
-aws s3 cp items.csv s3://fcj-recsys-data-<your-name>/personalize/
+aws s3 mb s3://fcj-recsys-data-tuan.2026
+aws s3 cp interactions.csv s3://fcj-recsys-data-tuan.2026/personalize/
+aws s3 cp items.csv s3://fcj-recsys-data-tuan.2026/personalize/
 ```
 
 #### Step 2. Let Personalize read the bucket
