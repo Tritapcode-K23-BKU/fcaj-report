@@ -1,6 +1,8 @@
 ---
-title: "8. Github Project Link"
+title: "Github Project Link"
 weight: 8
+chapter: false
+pre: " <b> 8. </b> "
 ---
 
 ## Project Source Code

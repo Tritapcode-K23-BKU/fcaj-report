@@ -1,6 +1,8 @@
 ---
-title: "8. Link Github dự án"
+title: "Link Github dự án"
 weight: 8
+chapter: false
+pre: " <b> 8. </b> "
 ---
 
 ## Mã nguồn dự án
