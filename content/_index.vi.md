@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** AI Engineer - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ 01/06/2026 đến 15/08/2026
+&emsp; **Thời gian thực tập:** Từ 01/06/2026 đến 14/08/2026
 
 ![Ảnh đại diện](/images/avatar.png?width=200px)
 

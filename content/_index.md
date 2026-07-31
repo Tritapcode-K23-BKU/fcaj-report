@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Position:** AI Engineer - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 01/06/2026 to 15/08/2026
+&emsp; **Internship Duration:** From 01/06/2026 to 14/08/2026
 
 ![Profile picture](/images/avatar.png?width=200px)
 
