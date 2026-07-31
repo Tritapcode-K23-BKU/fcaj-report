@@ -102,16 +102,4 @@ Do not rely on memory. Verify through the Billing console:
 Keeping the **CloudWatch log group** is fine; logs are cheap and can be useful later. If you want a completely clean account, delete it from the CloudWatch console too.
 {{% /notice %}}
 
-#### Clean-up checklist
 
-| Resource | Deleted |
-|---|---|
-| Personalize campaign | ☐ |
-| Personalize solution and dataset group | ☐ |
-| CloudFront distribution | ☐ |
-| Both S3 buckets | ☐ |
-| API Gateway | ☐ |
-| Lambda function | ☐ |
-| Eight DynamoDB tables | ☐ |
-| IAM role | ☐ |
-| CloudWatch alarms | ☐ |

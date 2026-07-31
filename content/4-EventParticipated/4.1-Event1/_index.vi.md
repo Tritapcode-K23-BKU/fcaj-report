@@ -1,5 +1,5 @@
 ---
-title: "Sự kiện 1"
+title: "Sự kiện 3"
 date: 2026-06-06
 weight: 4
 ---
@@ -13,7 +13,7 @@ weight: 4
 
 Tôi đã tham dự buổi sinh hoạt chuyên đề nội bộ gồm 6 bài báo cáo, trải dài từ hạ tầng công nghệ, ứng dụng AI/ML, kiến trúc Serverless, đóng gói ứng dụng cho đến kỹ năng làm việc nhóm. Dưới đây là tóm tắt nội dung từng chuyên đề.
 
-![Ảnh tham dự](/fcaj-report/images/4-Events/events-seminar-1.jpg)
+
 
 ### Chuyên đề 1 — AWS WAF & ML NIDS
 **Báo cáo viên:** Lê Hoàng Gia Đại
@@ -72,3 +72,5 @@ GraphRAG khắc phục nhược điểm của RAG truyền thống nhờ khả n
 **Dài hạn (6–12 tháng)**
 - Xây dựng thử nghiệm mô hình GraphRAG kết hợp LlamaIndex để quản lý tri thức nội bộ.
 - Rèn luyện tư duy Infrastructure as Code (IaC) để chuẩn bị cho lộ trình thăng tiến DevOps/Cloud Engineer.
+
+![Ảnh tham dự](/fcaj-report/images/4-Events/events-seminar-1.jpg)

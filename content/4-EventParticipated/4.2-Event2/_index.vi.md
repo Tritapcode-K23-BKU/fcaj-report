@@ -1,5 +1,5 @@
 ---
-title: "Sự kiện 2"
+title: "Sự kiện 1"
 date: 2026-07-11
 weight: 2
 ---
@@ -13,7 +13,6 @@ weight: 2
 
 Tôi tham dự buổi sinh hoạt chuyên đề thứ hai, tập trung vào hệ sinh thái AWS: lộ trình chứng chỉ AWS Cloud Practitioner (CLF-C02), bảo mật ứng dụng tự động dựa trên AI, và tư duy vận hành giám sát gắn với SLA.
 
-![Ảnh tham dự](/fcaj-report/images/4-Events/events-seminar-2.jpg)
 
 ### Chuyên đề 1 — Lộ trình chinh phục chứng chỉ AWS Cloud Practitioner (CLF-C02)
 
@@ -57,3 +56,5 @@ Thông điệp cốt lõi: dịch chuyển tư duy từ "hệ thống hoạt đ�
 1. Hệ thống hóa lại kiến thức cốt lõi theo khung AWS Well-Architected, ôn tập thuật ngữ dịch vụ chính để chuẩn bị thi CLF-C02.
 2. Thử nghiệm đưa công cụ quét mã nguồn tự động vào pipeline CI/CD (GitHub/GitLab) để phát hiện lỗ hổng sớm trước khi release.
 3. Rà soát bộ chỉ số giám sát hiện tại, xây dựng chỉ số đo hành vi người dùng (như tỷ lệ giao dịch thất bại) thay vì chỉ giám sát CPU/RAM, kết hợp CloudWatch Alarm và SNS thông báo tức thời.
+
+![Ảnh tham dự](/fcaj-report/images/4-Events/events-seminar-2.jpg)

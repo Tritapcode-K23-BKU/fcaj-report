@@ -120,9 +120,6 @@ aws s3api put-bucket-policy --bucket fcj-recsys-data-<your-name> --policy file:/
 
 The import takes roughly 10 to 20 minutes. The status must reach **Active**.
 
-{{% notice tip %}}
-While waiting, take screenshots of the steps you have completed for your report.
-{{% /notice %}}
 
 #### Step 5. Train a solution
 

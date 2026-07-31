@@ -15,7 +15,7 @@ Trong phần này bạn tạo nơi lưu và nơi phân phối giao diện web. B
 1. Mở [Amazon S3 console](https://s3.console.aws.amazon.com/s3/home?region=ap-southeast-1)
 2. Chọn **Create bucket**
 3. Điền thông tin:
-   - **Bucket name**: `fcj-recsys-frontend-tuan2026` (tên bucket là duy nhất toàn cầu, thêm hậu tố để tránh trùng)
+   - **Bucket name**: `fcj-recsys-frontend-tuan2026` 
    - **AWS Region**: Asia Pacific (Singapore) `ap-southeast-1`
    - **Block Public Access**: **giữ nguyên bật tất cả**
 4. Chọn **Create bucket**

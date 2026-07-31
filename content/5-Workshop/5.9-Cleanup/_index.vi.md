@@ -102,16 +102,4 @@ aws cloudwatch delete-alarms --alarm-names fcj-lambda-errors fcj-lambda-latency
 Giữ lại **CloudWatch log group** cũng được, log rất rẻ và có thể hữu ích khi bạn cần xem lại. Nhưng nếu muốn sạch hoàn toàn thì xoá luôn ở CloudWatch console.
 {{% /notice %}}
 
-#### Bảng kiểm dọn dẹp
 
-| Tài nguyên | Đã xoá |
-|---|---|
-| Personalize campaign | ☐ |
-| Personalize solution và dataset group | ☐ |
-| CloudFront distribution | ☐ |
-| Hai bucket S3 | ☐ |
-| API Gateway | ☐ |
-| Hàm Lambda | ☐ |
-| Tám bảng DynamoDB | ☐ |
-| IAM role | ☐ |
-| CloudWatch alarm | ☐ |

@@ -24,7 +24,7 @@ Ta chỉ cấp đúng thứ cần.
 Giờ thêm quyền riêng cho DynamoDB và Personalize:
 
 5. Mở role vừa tạo, chọn **Add permissions** rồi **Create inline policy**
-6. Chuyển sang tab **JSON**, dán nội dung sau (thay `<ACCOUNT-ID>` bằng số tài khoản của bạn):
+6. Chuyển sang tab **JSON**, dán nội dung sau 
 
 ```json
 {
@@ -37,7 +37,7 @@ Giờ thêm quyền riêng cho DynamoDB và Personalize:
         "dynamodb:DeleteItem", "dynamodb:Query", "dynamodb:Scan",
         "dynamodb:BatchGetItem", "dynamodb:BatchWriteItem"
       ],
-      "Resource": "arn:aws:dynamodb:ap-southeast-1:<ACCOUNT-ID>:table/*"
+      "Resource": "arn:aws:dynamodb:ap-southeast-1:482349687649:table/*"
     },
     {
       "Effect": "Allow",

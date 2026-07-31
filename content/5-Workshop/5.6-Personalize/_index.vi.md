@@ -120,9 +120,7 @@ aws s3api put-bucket-policy --bucket fcj-recsys-data-<tên-bạn> --policy file:
 
 Quá trình nạp mất khoảng 10 đến 20 phút. Trạng thái phải chuyển sang **Active**.
 
-{{% notice tip %}}
-Trong lúc chờ, tranh thủ chụp màn hình các bước đã làm cho phần báo cáo.
-{{% /notice %}}
+
 
 #### Bước 5. Huấn luyện solution
 

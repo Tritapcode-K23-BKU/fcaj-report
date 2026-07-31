@@ -24,7 +24,7 @@ We grant only what is needed.
 Now add the specific permissions for DynamoDB and Personalize:
 
 5. Open the new role, choose **Add permissions** then **Create inline policy**
-6. Switch to the **JSON** tab and paste the following (replace `<ACCOUNT-ID>` with your account number):
+6. Switch to the **JSON** tab and paste the following :
 
 ```json
 {
@@ -37,7 +37,7 @@ Now add the specific permissions for DynamoDB and Personalize:
         "dynamodb:DeleteItem", "dynamodb:Query", "dynamodb:Scan",
         "dynamodb:BatchGetItem", "dynamodb:BatchWriteItem"
       ],
-      "Resource": "arn:aws:dynamodb:ap-southeast-1:<ACCOUNT-ID>:table/*"
+      "Resource": "arn:aws:dynamodb:ap-southeast-1:482349687649:table/*"
     },
     {
       "Effect": "Allow",

@@ -1,5 +1,5 @@
 ---
-title: "Event 2"
+title: "Event 1"
 date: 2026-07-11
 weight: 2
 ---
@@ -13,7 +13,7 @@ weight: 2
 
 I attended a second internal seminar focused on the AWS ecosystem, covering the AWS Cloud Practitioner (CLF-C02) certification path, AI-driven application security automation, and operational monitoring practices built around SLAs.
 
-![Attendance photo](/fcaj-report/images/4-Events/events-seminar-2.jpg)
+
 
 ### Talk 1 — AWS Cloud Practitioner (CLF-C02) Roadmap
 
@@ -57,3 +57,5 @@ The core shift discussed: from "the system is up" to "the user is satisfied."
 1. Systematize core knowledge around the AWS Well-Architected Framework and review key service terminology in preparation for the CLF-C02 exam.
 2. Experiment with integrating automated source-code scanning into the CI/CD pipeline (GitHub/GitLab) to catch vulnerabilities before release.
 3. Review the current monitoring metric set and build user-behavior metrics (e.g. failed transaction rate) instead of relying only on CPU/RAM, paired with CloudWatch Alarm and SNS for instant notification.
+
+![Attendance photo](/fcaj-report/images/4-Events/events-seminar-2.jpg)

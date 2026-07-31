@@ -1,5 +1,5 @@
 ---
-title: "Events 1"
+title: "Event 3"
 date: 2026-06-06
 weight: 4
 ---
@@ -13,7 +13,7 @@ weight: 4
 
 I attended an internal tech seminar covering six presentations spanning infrastructure, applied AI/ML, serverless architecture, application packaging, and team collaboration skills. Below is a summary of the key takeaways from each talk.
 
-![Attendance photo](/fcaj-report/images/4-Events/events-seminar-1.jpg)
+
 
 ### Talk 1 — AWS WAF & ML-based NIDS
 **Speaker:** Le Hoang Gia Dai
@@ -72,3 +72,5 @@ GraphRAG improves on traditional RAG through multi-hop reasoning and by exploiti
 **Long term (6–12 months)**
 - Build an experimental GraphRAG + LlamaIndex setup for internal knowledge management.
 - Build an Infrastructure-as-Code mindset in preparation for a DevOps/Cloud Engineer career path.
+
+![Attendance photo](/fcaj-report/images/4-Events/events-seminar-1.jpg)
