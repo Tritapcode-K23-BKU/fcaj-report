@@ -8,7 +8,7 @@ pre: " <b> 1.11 </b> "
 
 #### Week 11 — Resource clean-up and wrap-up
 
-**Dates:** 10/08 - 15/08/2026
+**Dates:** 10/08 - 16/08/2026
 
 #### Goals
 

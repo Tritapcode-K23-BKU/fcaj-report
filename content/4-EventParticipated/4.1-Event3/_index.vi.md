@@ -52,4 +52,4 @@ Kết hợp Kinesis, YOLO và AgentCore để xử lý luồng video thời gian
 
 Một trải nghiệm đầy cảm xúc — thức debug xuyên đêm đến sáng và vỡ òa niềm vui khi demo thành công.
 
-![Ảnh tham dự](/fcaj-report/static/images/4-Events/events-seminar-3.jpg)
+![Ảnh tham dự]!(/images/4-Events/events-seminar-3.jpg)

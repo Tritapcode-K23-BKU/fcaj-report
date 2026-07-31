@@ -27,3 +27,6 @@ and difficulties encountered along with how they were resolved.
 | [Week 7](1.7-Week7/) | 13/07 - 19/07 | Amazon Personalize setup |
 | [Week 8](1.8-Week8/) | 20/07 - 26/07 | Data improvement and retraining |
 | [Week 9](1.9-Week9/) | 27/07 - 02/08 | Monitoring, testing and documentation |
+| [Week 10](1.10-Week10/) | 03/08 - 09/08 | Finalising documentation and handover |
+| [Week 11](1.11-Week11/) | 10/08 - 16/08 | Resource clean-up and wrap-up |
+| [Week 12](1.12-Week12/) | 17/08 - 23/08 | Next steps |

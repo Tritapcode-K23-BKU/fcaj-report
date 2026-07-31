@@ -8,7 +8,7 @@ pre: " <b> 1.11 </b> "
 
 #### Tuần 11 — Dọn dẹp tài nguyên và tổng kết
 
-**Thời gian:** 10/08 - 15/08/2026
+**Thời gian:** 10/08 - 16/08/2026
 
 #### Mục tiêu
 

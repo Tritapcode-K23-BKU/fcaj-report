@@ -52,4 +52,4 @@ Coordinating Kinesis, YOLO, and AgentCore for real-time video stream processing;
 
 An emotional rollercoaster — debugging overnight until morning, then bursting with joy upon a successful demo.
 
-![Attendance photo](/fcaj-report/static/images/4-Events/events-seminar-3.jpg)
+![Attendance photo](/images/4-Events/events-seminar-3.jpg)

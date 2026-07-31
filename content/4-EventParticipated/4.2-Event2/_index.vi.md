@@ -57,4 +57,4 @@ Thông điệp cốt lõi: dịch chuyển tư duy từ "hệ thống hoạt đ�
 2. Thử nghiệm đưa công cụ quét mã nguồn tự động vào pipeline CI/CD (GitHub/GitLab) để phát hiện lỗ hổng sớm trước khi release.
 3. Rà soát bộ chỉ số giám sát hiện tại, xây dựng chỉ số đo hành vi người dùng (như tỷ lệ giao dịch thất bại) thay vì chỉ giám sát CPU/RAM, kết hợp CloudWatch Alarm và SNS thông báo tức thời.
 
-![Ảnh tham dự](/fcaj-report/static/images/4-Events/events-seminar-2.jpg)
+![Ảnh tham dự](/images/4-Events/events-seminar-2.jpg)

@@ -73,4 +73,4 @@ GraphRAG improves on traditional RAG through multi-hop reasoning and by exploiti
 - Build an experimental GraphRAG + LlamaIndex setup for internal knowledge management.
 - Build an Infrastructure-as-Code mindset in preparation for a DevOps/Cloud Engineer career path.
 
-![Attendance photo](/fcaj-report/static/images/4-Events/events-seminar-1.jpg)
+![Attendance photo](/images/4-Events/events-seminar-1.jpg)

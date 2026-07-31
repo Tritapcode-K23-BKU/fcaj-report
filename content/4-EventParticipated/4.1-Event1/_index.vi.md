@@ -73,4 +73,4 @@ GraphRAG khắc phục nhược điểm của RAG truyền thống nhờ khả n
 - Xây dựng thử nghiệm mô hình GraphRAG kết hợp LlamaIndex để quản lý tri thức nội bộ.
 - Rèn luyện tư duy Infrastructure as Code (IaC) để chuẩn bị cho lộ trình thăng tiến DevOps/Cloud Engineer.
 
-![Ảnh tham dự](/fcaj-report/static/images/4-Events/events-seminar-1.jpg)
+![Ảnh tham dự](/images/4-Events/events-seminar-1.jpg)
