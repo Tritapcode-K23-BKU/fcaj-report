@@ -58,4 +58,4 @@ The core shift discussed: from "the system is up" to "the user is satisfied."
 2. Experiment with integrating automated source-code scanning into the CI/CD pipeline (GitHub/GitLab) to catch vulnerabilities before release.
 3. Review the current monitoring metric set and build user-behavior metrics (e.g. failed transaction rate) instead of relying only on CPU/RAM, paired with CloudWatch Alarm and SNS for instant notification.
 
-![Attendance photo](/fcaj-report/images/4-Events/events-seminar-2.jpg)
+![Attendance photo](/fcaj-report/static/images/4-Events/events-seminar-2.jpg)
