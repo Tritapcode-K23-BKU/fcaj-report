@@ -58,5 +58,4 @@ reproduce the entire system from an empty AWS account.
 5.  [Workshop](5-Workshop/)
 6.  [Self-evaluation](6-Self-evaluation/)
 7.  [Sharing and Feedback](7-Feedback/)
-
-[Github Project Link](8-Github/)
+8.  [Github Project Link](8-Github/)
