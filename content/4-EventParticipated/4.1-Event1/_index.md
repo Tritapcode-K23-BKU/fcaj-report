@@ -1,126 +1,74 @@
 ---
-title: "Event 1"
-date: 2024-01-01
-weight: 1
-chapter: false
-pre: " <b> 4.1. </b> "
+title: "Events"
+date: 2026-06-06
+weight: 4
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+## Internal Tech Seminar — 6 Topics (June 6, 2026)
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+**Format:** Internal knowledge-sharing session
+**Scope:** Infrastructure, Cloud, AI, Game Dev, Soft Skills
+**Number of talks:** 6
+**Date:** June 6, 2026
 
-### Event Objectives
+I attended an internal tech seminar covering six presentations spanning infrastructure, applied AI/ML, serverless architecture, application packaging, and team collaboration skills. Below is a summary of the key takeaways from each talk.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+*(Attendance photo — see `events-seminar-1.jpg` etc.)*
 
-### Speakers
+### Talk 1 — AWS WAF & ML-based NIDS
+**Speaker:** Le Hoang Gia Dai
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+Traditional WAFs rely on fixed rule sets and often miss zero-day attacks or novel behavioral variants. The speaker trained a LightGBM model on the CSE-CIC-IDS2018 dataset, reaching 0.9586 accuracy in classifying malicious network behavior, and integrated it with AWS Lambda, Kinesis Data Firehose, and Security Hub to analyze traffic and trigger automated security responses in real time.
 
-### Key Highlights
+**Takeaway:** Moving from reactive, rule-based security to proactive AI/ML-driven detection significantly improves zero-day threat coverage on cloud infrastructure.
 
-#### Identifying the drawbacks of legacy application architecture
+### Talk 2 — Docker & Containerization
+**Speaker:** Bao Huynh
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+Containers are far lighter than VMs — millisecond startup and shared host kernel keep resource usage minimal. The standard workflow: define the environment in a `Dockerfile` → build an immutable image → run consistent, isolated containers. This underpins microservices architecture and CI/CD pipelines, enabling "build once, run anywhere" and closing the dev/prod environment gap.
 
-#### Transitioning to modern application architecture – Microservices
+**Takeaway:** Containerization is now the baseline standard for packaging, deploying, and scaling modern software.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+### Talk 3 — From IT Helpdesk to Senior Sysadmin
+**Speaker:** Tran Trung Vinh
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+A career path from Helpdesk (troubleshooting and user communication) to professional Sysadmin and Cloud/DevOps Engineer. Core sysadmin mindset: automate repetitive work, document processes, and never test directly in production. Moving into cloud/DevOps means shifting from managing physical servers to auto-scaling, pay-as-you-go infrastructure and Infrastructure as Code (IaC). The speaker's advice: prioritize hands-on project experience over collecting certifications.
 
-#### Domain-Driven Design (DDD)
+**Takeaway:** Communication skills, automation mindset, and real-world experience are the keys to sustainable growth in infrastructure roles.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+### Talk 4 — Multiplayer with AWS WebSockets in Godot
+**Speaker:** Nguyen Quoc Bao
 
-#### Event-Driven Architecture
+A serverless multiplayer architecture combining the Godot game engine with AWS: API Gateway (WebSocket) for persistent two-way connections, Lambda for game logic, and DynamoDB for player state. The talk compared UDP (fast-paced action games) versus WebSocket (turn-based games, lobbies, in-game chat), and covered practical issues like handling stale connections and minimizing costly DynamoDB scan operations.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+**Takeaway:** Serverless plus WebSocket enables multiplayer games with low upfront operating cost and flexible auto-scaling.
 
-#### Compute Evolution
+### Talk 5 — The Art of Effective Teamwork
+**Speaker:** Truong Huy Phuoc
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+Four golden rules: (1) define a clear, measurable shared goal; (2) place the right person in the role that fits their strengths; (3) communicate openly and listen actively; (4) build individual accountability toward the shared product. The talk also covered tooling for transparent workflow management — Trello, Slack, Discord, ClickUp.
 
-#### Amazon Q Developer
+**Takeaway:** Strong technical skill is necessary but not sufficient — collaboration habits and communication discipline are what determine project success.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+### Talk 6 — GraphRAG with Amazon Bedrock and Neptune
+**Speaker:** Viet Phat
 
-### Key Takeaways
+GraphRAG improves on traditional RAG through multi-hop reasoning and by exploiting semantic relationships between entities via a knowledge graph. Two deployment paths on AWS were presented: (1) a managed approach using Amazon Bedrock Knowledge Bases with Neptune Analytics for fast deployment, and (2) a custom pipeline built with LlamaIndex plus Amazon Neptune for deeper customization.
 
-#### Design Mindset
+**Takeaway:** Knowledge graphs are a meaningful step up in accuracy and reasoning quality for complex enterprise generative AI applications.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+---
 
-#### Technical Architecture
+### Personal Application Plan
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+**Short term (1–2 months)**
+- Practice packaging personal/current projects with Docker and Docker Compose to standardize the dev environment.
+- Apply project management tools (Trello/ClickUp) to team collaboration using the 4 golden rules above.
 
-#### Modernization Strategy
+**Medium term (3–6 months)**
+- Study AWS Lambda + API Gateway WebSocket integration for real-time data use cases.
+- Explore LightGBM and basic ML models for system log analysis.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
-
-### Applying to Work
-
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
-
-### Event Experience
-
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
-
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
-
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+**Long term (6–12 months)**
+- Build an experimental GraphRAG + LlamaIndex setup for internal knowledge management.
+- Build an Infrastructure-as-Code mindset in preparation for a DevOps/Cloud Engineer career path.
