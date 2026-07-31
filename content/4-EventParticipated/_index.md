@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 During my internship, I participated in three internal tech seminars. Each one provided new, practical knowledge directly relevant to the cloud architecture work on my team.
 
-### [Event 1](4.2-event1/)
+### [Event 1](4.2-event2/)
 &emsp;**Event Name:** Internal Tech Seminar — 6 Topics (Infrastructure, Cloud, AI, Game Dev, Soft Skills)
 
 &emsp;**Date & Time:** 09:00, June 6, 2026

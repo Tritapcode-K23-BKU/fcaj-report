@@ -1,5 +1,5 @@
 ---
-title: "Các events đã tham gia"
+title: "Các sự kiện đã tham gia"
 date: 2026-07-31
 weight: 4
 chapter: false
@@ -8,7 +8,7 @@ pre: " <b> 4. </b> "
 
 Trong quá trình thực tập, em đã tham gia 3 buổi sinh hoạt chuyên đề nội bộ. Mỗi buổi đều mang lại kiến thức mới, thực tế và gắn liền với công việc kiến trúc Cloud của nhóm em.
 
-### [Sự kiện 1](4.2-event1//)
+### [Sự kiện 1](4.2-event2/)
 &emsp;**Tên sự kiện:** Buổi sinh hoạt chuyên đề nội bộ — 6 chuyên đề (Hạ tầng, Cloud, AI, Game Dev, Kỹ năng mềm)
 
 &emsp;**Thời gian:** 09:00 ngày 06/06/2026
