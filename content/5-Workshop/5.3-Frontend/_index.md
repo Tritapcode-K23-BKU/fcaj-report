@@ -101,6 +101,6 @@ The interface should render. Product data will be missing because the API does n
 **Remember this one, it will save you hours.** Every time you upload a new build to S3 you **must** create an invalidation, otherwise CloudFront keeps serving the cached old version and you will think your code is broken.
 
 ```bash
-aws cloudfront create-invalidation --distribution-id <E2II1RNB6NMDRB> --paths "/*"
+aws cloudfront create-invalidation --distribution-id E2II1RNB6NMDRB --paths "/*"
 ```
 {{% /notice %}}

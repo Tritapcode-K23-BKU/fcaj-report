@@ -27,6 +27,4 @@ Mỗi tuần gồm bốn phần: mục tiêu đặt ra, công việc đã thực
 | [Tuần 7](1.7-Week7/) | 13/07 - 19/07 | Thiết lập Amazon Personalize |
 | [Tuần 8](1.8-Week8/) | 20/07 - 26/07 | Cải tiến dữ liệu và huấn luyện lại |
 | [Tuần 9](1.9-Week9/) | 27/07 - 02/08 | Giám sát, kiểm thử và tài liệu |
-| [Tuần 10](1.10-Week10/) | 03/08 - 09/08 | Hoàn thiện tài liệu và bàn giao dự án |
-| [Tuần 11](1.11-Week11/) | 10/08 - 16/08 | Dọn dẹp tài nguyên và tổng kết dự án |
-| [Tuần 12](1.12-Week12/) | 17/08 - 23/08 | Định hướng và kế hoạch tiếp theo |
+

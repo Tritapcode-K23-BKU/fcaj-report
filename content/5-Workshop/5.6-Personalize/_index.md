@@ -70,8 +70,8 @@ Add a bucket policy allowing Personalize to read. Create `bucket-policy.json`:
     "Principal": { "Service": "personalize.amazonaws.com" },
     "Action": ["s3:GetObject", "s3:ListBucket"],
     "Resource": [
-      "arn:aws:s3:::fcj-recsys-data-<your-name>",
-      "arn:aws:s3:::fcj-recsys-data-<your-name>/*"
+      "arn:aws:s3:::fcj-recsys-data-tuan.2026",
+      "arn:aws:s3:::fcj-recsys-data-tuan.2026/*"
     ]
   }]
 }
@@ -173,7 +173,7 @@ Copy the Campaign ARN, then add an environment variable to Lambda:
 
 ```bash
 aws personalize-runtime get-recommendations \
-  --campaign-arn <CAMPAIGN-ARN> \
+  --campaign-arn arn:aws:personalize:ap-southeast-1:482349687649:campaign/fcj-recsys-campaign \
   --user-id user-001 \
   --num-results 5
 ```

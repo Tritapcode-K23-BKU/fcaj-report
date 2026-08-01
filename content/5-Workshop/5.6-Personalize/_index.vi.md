@@ -70,8 +70,8 @@ Thêm bucket policy cho phép Personalize đọc. Tạo file `bucket-policy.json
     "Principal": { "Service": "personalize.amazonaws.com" },
     "Action": ["s3:GetObject", "s3:ListBucket"],
     "Resource": [
-      "arn:aws:s3:::fcj-recsys-data-<tên-bạn>",
-      "arn:aws:s3:::fcj-recsys-data-<tên-bạn>/*"
+      "arn:aws:s3:::fcj-recsys-data-tuan.2026",
+      "arn:aws:s3:::fcj-recsys-data-tuan.2026/*"
     ]
   }]
 }
@@ -174,7 +174,7 @@ Copy Campaign ARN, rồi thêm biến môi trường cho Lambda:
 
 ```bash
 aws personalize-runtime get-recommendations \
-  --campaign-arn <CAMPAIGN-ARN> \
+  --campaign-arn arn:aws:personalize:ap-southeast-1:482349687649:campaign/fcj-recsys-campaign \
   --user-id user-001 \
   --num-results 5
 ```

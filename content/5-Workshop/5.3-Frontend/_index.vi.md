@@ -101,6 +101,6 @@ Giao diện phải hiển thị được. Phần dữ liệu sản phẩm chưa 
 **Ghi nhớ điều này, nó sẽ tiết kiệm cho bạn hàng giờ.** Mỗi lần tải bản build mới lên S3, bạn **bắt buộc** phải tạo invalidation, nếu không CloudFront vẫn phục vụ bản cũ trong bộ nhớ đệm và bạn sẽ tưởng mã nguồn bị lỗi.
 
 ```bash
-aws cloudfront create-invalidation --distribution-id <E2II1RNB6NMDRB> --paths "/*"
+aws cloudfront create-invalidation --distribution-id E2II1RNB6NMDRB --paths "/*"
 ```
 {{% /notice %}}

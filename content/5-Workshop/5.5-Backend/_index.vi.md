@@ -127,7 +127,7 @@ cd frontend
 echo "VITE_API_BASE_URL=https://xxxxx.execute-api.ap-southeast-1.amazonaws.com" > .env
 npm run build
 aws s3 sync dist/ s3://fcj-recsys-frontend-tuan2026/ --delete
-aws cloudfront create-invalidation --distribution-id <E2II1RNB6NMDRB> --paths "/*"
+aws cloudfront create-invalidation --distribution-id E2II1RNB6NMDRB --paths "/*"
 ```
 
 #### Kiểm tra
