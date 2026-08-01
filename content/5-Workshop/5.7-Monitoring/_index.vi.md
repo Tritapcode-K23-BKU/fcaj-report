@@ -28,9 +28,9 @@ aws sns create-topic --name fcj-recsys-alerts
 
 ```bash
 aws sns subscribe \
-  --topic-arn <TOPIC-ARN> \
+  --topic-arn arn:aws:sns:ap-southeast-1:482349687649:fcj-recsys-alerts \
   --protocol email \
-  --notification-endpoint email-cua-ban@example.com
+  --notification-endpoint tri***@gmail.com
 ```
 
 Mở hộp thư và bấm xác nhận đăng ký.

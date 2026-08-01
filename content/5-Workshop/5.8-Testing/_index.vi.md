@@ -17,14 +17,14 @@ Từng thành phần chạy được không đảm bảo cả hệ thống chạ
 aws dynamodb scan --table-name Products --select COUNT
 
 # Lớp API
-curl https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/products
+curl https://83cgmdisl8.execute-api.ap-southeast-1.amazonaws.com/products
 
 # Lớp học máy
 aws personalize-runtime get-recommendations \
-  --campaign-arn <CAMPAIGN-ARN> --user-id user-001 --num-results 5
+  --campaign-arn arn:aws:personalize:ap-southeast-1:482349687649:campaign/fcj-recsys-campaign --user-id user-001 --num-results 5
 
 # Lớp gợi ý qua API
-curl "https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/recommendations?userId=user-001"
+curl "https://83cgmdisl8.execute-api.ap-southeast-1.amazonaws.com/recommendations?userId=user-001"
 ```
 
 #### Bước 2. Kiểm tra gợi ý thực sự cá nhân hoá
@@ -64,7 +64,7 @@ Bấm **F12** mở Developer Tools, xem tab **Network** để chắc chắn các
 Máy chủ phải tự tính lại tổng tiền, không tin số liệu do trình duyệt gửi lên. Thử gửi một đơn hàng với giá bị sửa:
 
 ```bash
-curl -X POST https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/orders \
+curl -X POST https://83cgmdisl8.execute-api.ap-southeast-1.amazonaws.com/orders \
   -H "Content-Type: application/json" \
   -H "Authorization: <TOKEN-CUA-BAN>" \
   -d '{"items":[{"productId":"prod-001","quantity":1,"price":1}]}'

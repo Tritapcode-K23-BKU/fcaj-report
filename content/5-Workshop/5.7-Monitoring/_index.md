@@ -28,9 +28,9 @@ Subscribe your email:
 
 ```bash
 aws sns subscribe \
-  --topic-arn <TOPIC-ARN> \
+  --topic-arn arn:aws:sns:ap-southeast-1:482349687649:fcj-recsys-alerts \
   --protocol email \
-  --notification-endpoint your-email@example.com
+  --notification-endpoint tri***@gmail.com
 ```
 
 Open your inbox and confirm the subscription.

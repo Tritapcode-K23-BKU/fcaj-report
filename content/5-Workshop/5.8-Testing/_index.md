@@ -17,14 +17,14 @@ Work from the inside out; stop and fix at whichever layer fails.
 aws dynamodb scan --table-name Products --select COUNT
 
 # API layer
-curl https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/products
+curl https://83cgmdisl8.execute-api.ap-southeast-1.amazonaws.com/products
 
 # ML layer
 aws personalize-runtime get-recommendations \
-  --campaign-arn <CAMPAIGN-ARN> --user-id user-001 --num-results 5
+  --campaign-arn arn:aws:personalize:ap-southeast-1:482349687649:campaign/fcj-recsys-campaign --user-id user-001 --num-results 5  
 
 # Recommendations through the API
-curl "https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/recommendations?userId=user-001"
+curl "https://83cgmdisl8.execute-api.ap-southeast-1.amazonaws.com/recommendations?userId=user-001"
 ```
 
 #### Step 2. Verify recommendations are actually personalised
@@ -64,9 +64,9 @@ Press **F12** to open Developer Tools and check the **Network** tab to confirm A
 The server must recalculate totals itself rather than trusting the browser. Try submitting an order with a tampered price:
 
 ```bash
-curl -X POST https://xxxxx.execute-api.ap-southeast-1.amazonaws.com/orders \
+curl -X POST https://83cgmdisl8.execute-api.ap-southeast-1.amazonaws.com/orders \
   -H "Content-Type: application/json" \
-  -H "Authorization: <YOUR-TOKEN>" \
+  -H "Authorization: <TOKEN-CUA-BAN>" \
   -d '{"items":[{"productId":"prod-001","quantity":1,"price":1}]}'
 ```
 

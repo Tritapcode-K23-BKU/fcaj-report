@@ -17,7 +17,7 @@ Order matters because resources depend on each other. Follow the list below, sta
 #### Step 1. Delete the campaign --- highest priority
 
 ```bash
-aws personalize delete-campaign --campaign-arn <CAMPAIGN-ARN>
+aws personalize delete-campaign --campaign-arn arn:aws:personalize:ap-southeast-1:482349687649:campaign/fcj-recsys-campaign
 ```
 
 Or in the console: **Personalize** → **Campaigns** → select the campaign → **Delete**.
@@ -30,13 +30,15 @@ These must be deleted in this exact order, otherwise you get dependency errors:
 
 ```bash
 # Delete the solution first
-aws personalize delete-solution --solution-arn <SOLUTION-ARN>
+aws personalize delete-solution --solution-arn arn:aws:personalize:ap-southeast-1:482349687649:solution/fcj-user-personalization
 
 # Wait for it to disappear, then delete the dataset
-aws personalize delete-dataset --dataset-arn <DATASET-ARN>
+aws personalize delete-dataset --dataset-arn arn:aws:personalize:ap-southeast-1:482349687649:dataset/fcj-recsys-dsg/ITEMS
+aws personalize delete-dataset --dataset-arn arn:aws:personalize:ap-southeast-1:482349687649:dataset/fcj-recsys-dsg/INTERACTIONS
+
 
 # Finally delete the dataset group
-aws personalize delete-dataset-group --dataset-group-arn <DSG-ARN>
+aws personalize delete-dataset-group --dataset-group-arn arn:aws:personalize:ap-southeast-1:482349687649:dataset-group/fcj-recsys-dsg
 ```
 
 {{% notice note %}}
@@ -57,17 +59,17 @@ CloudFront will not delete an enabled distribution, so disable it first.
 A bucket must be empty before it can be deleted:
 
 ```bash
-aws s3 rm s3://fcj-recsys-frontend-<your-name> --recursive
-aws s3 rb s3://fcj-recsys-frontend-<your-name>
+aws s3 rm s3://fcj-recsys-frontend-tuan2026 --recursive
+aws s3 rb s3://fcj-recsys-frontend-tuan2026
 
-aws s3 rm s3://fcj-recsys-data-<your-name> --recursive
-aws s3 rb s3://fcj-recsys-data-<your-name>
+aws s3 rm s3://fcj-recsys-data-tuan.2026 --recursive
+aws s3 rb s3://fcj-recsys-data-tuan.2026
 ```
 
 #### Step 5. Delete API Gateway and Lambda
 
 ```bash
-aws apigatewayv2 delete-api --api-id <API-ID>
+aws apigatewayv2 delete-api --api-id 83cgmdisl8
 aws lambda delete-function --function-name fcj-recsys-api
 ```
 

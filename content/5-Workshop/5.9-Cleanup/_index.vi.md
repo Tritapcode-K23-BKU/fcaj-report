@@ -17,7 +17,7 @@ Thứ tự quan trọng vì các tài nguyên phụ thuộc lẫn nhau. Xoá the
 #### Bước 1. Xoá campaign --- ưu tiên cao nhất
 
 ```bash
-aws personalize delete-campaign --campaign-arn <CAMPAIGN-ARN>
+aws personalize delete-campaign --campaign-arn arn:aws:personalize:ap-southeast-1:482349687649:campaign/fcj-recsys-campaign
 ```
 
 Hoặc trên console: **Personalize** → **Campaigns** → chọn campaign → **Delete**.
@@ -30,13 +30,14 @@ Phải xoá theo đúng thứ tự này, nếu không sẽ báo lỗi phụ thu�
 
 ```bash
 # Xoá solution trước
-aws personalize delete-solution --solution-arn <SOLUTION-ARN>
+aws personalize delete-solution --solution-arn arn:aws:personalize:ap-southeast-1:482349687649:solution/fcj-user-personalization
 
 # Đợi solution biến mất rồi xoá dataset
-aws personalize delete-dataset --dataset-arn <DATASET-ARN>
+aws personalize delete-dataset --dataset-arn arn:aws:personalize:ap-southeast-1:482349687649:dataset/fcj-recsys-dsg/ITEMS
+aws personalize delete-dataset --dataset-arn arn:aws:personalize:ap-southeast-1:482349687649:dataset/fcj-recsys-dsg/INTERACTIONS
 
 # Cuối cùng xoá dataset group
-aws personalize delete-dataset-group --dataset-group-arn <DSG-ARN>
+aws personalize delete-dataset-group --dataset-group-arn arn:aws:personalize:ap-southeast-1:482349687649:dataset-group/fcj-recsys-dsgize:ap-southeast-1:482349687649:dataset-group/fcj-recsys-dsg
 ```
 
 {{% notice note %}}
@@ -57,17 +58,17 @@ CloudFront không cho xoá distribution đang bật, phải vô hiệu hoá trư
 Bucket phải rỗng mới xoá được:
 
 ```bash
-aws s3 rm s3://fcj-recsys-frontend-<tên-bạn> --recursive
-aws s3 rb s3://fcj-recsys-frontend-<tên-bạn>
+aws s3 rm s3://fcj-recsys-frontend-tuan2026 --recursive
+aws s3 rb s3://fcj-recsys-frontend-tuan2026
 
-aws s3 rm s3://fcj-recsys-data-<tên-bạn> --recursive
-aws s3 rb s3://fcj-recsys-data-<tên-bạn>
+aws s3 rm s3://fcj-recsys-data-tuan.2026 --recursive
+aws s3 rb s3://fcj-recsys-data-tuan.2026
 ```
 
 #### Bước 5. Xoá API Gateway và Lambda
 
 ```bash
-aws apigatewayv2 delete-api --api-id <API-ID>
+aws apigatewayv2 delete-api --api-id 83cgmdisl8
 aws lambda delete-function --function-name fcj-recsys-api
 ```
 
